@@ -1,2 +1,6 @@
-нужно написать техническую документацию
-запилил бэк
+Стек технологий
+Next.js  
+React      
+React DOM 
+React Scroll 
+TypeScript 
