@@ -1,6 +1,7 @@
 "use client";
 import ReviewItem from "../components/Review";
 import { useState, useEffect } from "react";
+import style from "@/app/style/Response.module.css";
 
 interface Review {
   client: string;
@@ -52,11 +53,30 @@ function Response() {
   }, []);
   return (
     <>
-      {reviews.map((item, index) => {
-        return (
-          <ReviewItem key={index} client={item.client} message={item.message} />
-        );
-      })}
+      <div className={`${style.Response}`}>
+        <div>
+          {reviews.map((item, index) => {
+            return (
+              <ReviewItem
+                key={index}
+                client={item.client}
+                message={item.message}
+              />
+            );
+          })}
+        </div>
+        <div>
+          {reviews.map((item, index) => {
+            return (
+              <ReviewItem
+                key={index}
+                client={item.client}
+                message={item.message}
+              />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
