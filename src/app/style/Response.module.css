@@ -1,9 +1,126 @@
 .Response {
-    width: 100%;
-    padding: 60px 0;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+  width: 100%;
+  background: black;
+  height: 100vh;
+  max-height: 1000px;
+  overflow-x: hidden;
+  position: relative;
+}
+.bg {
+  background: radial-gradient(
+      122% 25.02% at 71% 39%,
+      rgb(255, 19, 212),
+      rgb(255, 192, 193) 25%,
+      rgb(255, 41, 127) 50.798%,
+      rgb(0, 0, 0) 100%
+    )
+    /* Предупреждение: градиент использует вращение, не поддерживаемое CSS, и может работать не так, как ожидается. */;
+}
+.MainWidth {
+  margin: auto;
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  padding: 0 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.SA,
+.SA_Rotate {
+  color: white;
+  font-family: var(--Unbounded-Regular);
+  font-size: 300px;
+  font-weight: 400;
+  line-height: 86%;
+  letter-spacing: 5%;
+  text-align: left;
+}
+.SA_Rotate {
+  color: white;
+  transform: skew(-61deg, 0deg) rotateX(180deg) scaleY(0.5);
+  margin-right: 201px;
+  margin-top: -90px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.SAbox {
+  display: flex;
+  z-index: 9;
+  right: 0;
+  left: 30%;
+  top: 27.5%;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -242px;
+  width: fit-content;
+  margin: -242px auto;
+  padding-left: 400px;
+}
+.what {
+  color: rgb(255, 255, 255);
+  font-family: var(--Unbounded-Regular);
+  font-size: 40px;
+  margin-top: 60px;
+  font-weight: 400;
+  width: 300px;
+  line-height: 86%;
+  letter-spacing: 5%;
+  text-align: right;
+}
+.Responds {
+  width: 1500px;
+  position: relative;
+  width: 40%;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.Responds::-webkit-scrollbar {
+  display: none;
+}
+
+.Responds::before {
+  content: "";
+  top: 0;
+  right: 0;
+  position: fixed;
+  left: 0;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0),
+    rgba(102, 102, 102, 0) 100%
+  );
+  z-index: 5;
+}
+
+.Responds::after {
+  content: "";
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  left: 0;
+  height: 100px;
+  transform: rotate(180deg);
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0),
+    rgba(102, 102, 102, 0) 100%
+  );
+  z-index: 5;
+}
+.bottomElement {
+  background: radial-gradient(
+    119.77% 94.05% at 117% -8%,
+    rgb(255, 19, 212),
+    rgb(0, 0, 0) 88%
+  );
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  z-index: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
 }

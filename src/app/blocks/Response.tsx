@@ -1,6 +1,6 @@
 "use client";
 import ReviewItem from "../components/Review";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import style from "@/app/style/Response.module.css";
 
 interface Review {
@@ -10,6 +10,18 @@ interface Review {
 
 function Response() {
   let [reviews, setReviews] = useState<Review[]>([]);
+  let [scrollPosition, setScrollPosition] = useState<number | null>(null);
+  let elem = useRef(null);
+  function AutoScroll(elem: any) {
+    elem.scroll({
+      top: 10,
+      behavior: "smooth",
+    });
+  }
+  useLayoutEffect(() => {
+    setScrollPosition(10);
+    return () => {};
+  }, []);
   useEffect(() => {
     setReviews([
       {
@@ -54,27 +66,30 @@ function Response() {
   return (
     <>
       <div className={`${style.Response}`}>
-        <div>
-          {reviews.map((item, index) => {
-            return (
-              <ReviewItem
-                key={index}
-                client={item.client}
-                message={item.message}
-              />
-            );
-          })}
+        <div className={`${style.MainWidth}`}>
+          <div className={`${style.Responds}`} ref={elem} id="scrollelem">
+            {reviews.map((item, index) => {
+              return (
+                <ReviewItem
+                  key={index}
+                  client={item.client}
+                  message={item.message}
+                />
+              );
+            })}
+          </div>
+
+          <div>
+            <h1 className={`${style.what}`}>А что говорят люди?</h1>
+          </div>
         </div>
-        <div>
-          {reviews.map((item, index) => {
-            return (
-              <ReviewItem
-                key={index}
-                client={item.client}
-                message={item.message}
-              />
-            );
-          })}
+        <div className={`${style.bg}`}></div>
+
+        <div className={`${style.bottomElement}`}>
+          <div className={`${style.SAbox}`}>
+            <span className={`${style.SA}`}>SA</span>
+            <span className={`${style.SA_Rotate}`}>SA</span>
+          </div>
         </div>
       </div>
     </>
