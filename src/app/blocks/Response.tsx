@@ -10,18 +10,48 @@ interface Review {
 
 function Response() {
   let [reviews, setReviews] = useState<Review[]>([]);
-  let [scrollPosition, setScrollPosition] = useState<number | null>(null);
-  let elem = useRef(null);
-  function AutoScroll(elem: any) {
-    elem.scroll({
-      top: 10,
-      behavior: "smooth",
-    });
-  }
-  useLayoutEffect(() => {
-    setScrollPosition(10);
-    return () => {};
-  }, []);
+  let [scrollPosition, setScrollPosition] = useState<number>(0);
+  let elem = useRef<HTMLDivElement>(null);
+  let [heightElem, setHeight] = useState(0);
+  useEffect(() => {
+    if (elem.current) {
+      setHeight(elem.current.getBoundingClientRect().height);
+    }
+  }, [elem.current]);
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      if (scrollPosition >= heightElem ) {
+        console.log("Вверх");
+        setScrollPosition((prevPosition) => {
+          const newPosition = prevPosition - 10;
+          if (elem.current) {
+            elem.current.scroll({
+              top: newPosition,
+              behavior: "smooth",
+            });
+          }
+          return newPosition;
+        });
+        return;
+      } else {
+        setScrollPosition((prevPosition) => {
+          console.log("Вниз");
+          const newPosition = prevPosition + 10;
+          if (elem.current) {
+            elem.current.scroll({
+              top: newPosition,
+              behavior: "smooth",
+            });
+          }
+          return newPosition;
+        });
+      }
+    }, 100);
+    return () => {
+      clearInterval(timer);
+    };
+  });
   useEffect(() => {
     setReviews([
       {
