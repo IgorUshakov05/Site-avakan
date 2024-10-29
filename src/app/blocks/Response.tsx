@@ -1,6 +1,6 @@
 "use client";
 import ReviewItem from "../components/Review";
-import { useState, useEffect, useRef, useLayoutEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import style from "@/app/style/Response.module.css";
 
 interface Review {
@@ -10,48 +10,37 @@ interface Review {
 
 function Response() {
   let [reviews, setReviews] = useState<Review[]>([]);
-  let [scrollPosition, setScrollPosition] = useState<number>(0);
   let elem = useRef<HTMLDivElement>(null);
-  let [heightElem, setHeight] = useState(0);
-  useEffect(() => {
-    if (elem.current) {
-      setHeight(elem.current.getBoundingClientRect().height);
-    }
-  }, [elem.current]);
+  let [scrollPosition, setScrollPosition] = useState(0);
+  let [scrollDirection, setScrollDirection] = useState(1); // 1 для вниз, -1 для вверх
 
   useEffect(() => {
-    let timer = setInterval(() => {
-      if (scrollPosition >= heightElem ) {
-        console.log("Вверх");
+    const scrollStep = () => {
+      if (elem.current) {
+        const { scrollTop, scrollHeight, clientHeight } = elem.current;
+
+        if (scrollTop + clientHeight >= scrollHeight) {
+          setScrollDirection(-0.1); // меняем направление на вверх
+        } else if (scrollTop <= 0) {
+          setScrollDirection(0.1); // меняем направление на вниз
+        }
+
         setScrollPosition((prevPosition) => {
-          const newPosition = prevPosition - 10;
-          if (elem.current) {
-            elem.current.scroll({
-              top: newPosition,
-              behavior: "smooth",
-            });
-          }
-          return newPosition;
-        });
-        return;
-      } else {
-        setScrollPosition((prevPosition) => {
-          console.log("Вниз");
-          const newPosition = prevPosition + 10;
-          if (elem.current) {
-            elem.current.scroll({
-              top: newPosition,
-              behavior: "smooth",
-            });
-          }
+          const newPosition = prevPosition + 10 * scrollDirection;
+          elem.current.scrollTo({
+            top: newPosition,
+            behavior: "smooth",
+          });
           return newPosition;
         });
       }
-    }, 100);
+    };
+
+    const timer = setInterval(scrollStep, 100);
     return () => {
       clearInterval(timer);
     };
-  });
+  }, [scrollDirection]);
   useEffect(() => {
     setReviews([
       {
