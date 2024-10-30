@@ -12,6 +12,7 @@ function Response() {
   let [reviews, setReviews] = useState<Review[]>([]);
   let elem = useRef<HTMLDivElement>(null);
   let [scrollPosition, setScrollPosition] = useState(0);
+  let [stop, setStop] = useState(false);
   let [scrollDirection, setScrollDirection] = useState(1); // 1 для вниз, -1 для вверх
 
   useEffect(() => {
@@ -26,7 +27,7 @@ function Response() {
         }
 
         setScrollPosition((prevPosition) => {
-          const newPosition = prevPosition + 10 * scrollDirection;
+          const newPosition = stop?prevPosition:prevPosition + 10 * scrollDirection;
           elem.current.scrollTo({
             top: newPosition,
             behavior: "smooth",
@@ -40,7 +41,7 @@ function Response() {
     return () => {
       clearInterval(timer);
     };
-  }, [scrollDirection]);
+  }, [scrollDirection,stop]);
   useEffect(() => {
     setReviews([
       {
@@ -82,11 +83,23 @@ function Response() {
       },
     ]);
   }, []);
+  function stopScroll(): void {
+    setStop(true);
+  }
+  function startScroll(): void {
+    setStop(false);
+  }
   return (
     <>
       <div className={`${style.Response}`}>
         <div className={`${style.MainWidth}`}>
-          <div className={`${style.Responds}`} ref={elem} id="scrollelem">
+          <div
+            className={`${style.Responds}`}
+            ref={elem}
+            id="scrollelem"
+            onMouseEnter={stopScroll}
+            onMouseLeave={startScroll}
+          >
             {reviews.map((item, index) => {
               return (
                 <ReviewItem
@@ -103,7 +116,8 @@ function Response() {
           </div>
         </div>
         <div className={`${style.bg}`}></div>
-
+        <div className={`${style.bgForLight}`}></div>
+            
         <div className={`${style.bottomElement}`}>
           <div className={`${style.SAbox}`}>
             <span className={`${style.SA}`}>SA</span>

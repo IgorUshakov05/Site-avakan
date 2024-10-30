@@ -3,16 +3,14 @@
   background: black;
   height: 100vh;
   max-height: 1000px;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 .bg {
   background: radial-gradient(
-      122% 25.02% at 71% 39%,
+      62.77% 97.05% at 66% -2%,
       rgb(255, 19, 212),
-      rgb(255, 192, 193) 25%,
-      rgb(255, 41, 127) 50.798%,
-      rgb(0, 0, 0) 100%
+      rgb(0, 0, 0) 88%
     )
     /* Предупреждение: градиент использует вращение, не поддерживаемое CSS, и может работать не так, как ожидается. */;
 }
@@ -28,7 +26,7 @@
 }
 .SA,
 .SA_Rotate {
-  color: white;
+  color: black;
   font-family: var(--Unbounded-Regular);
   font-size: 300px;
   font-weight: 400;
@@ -37,7 +35,7 @@
   text-align: left;
 }
 .SA_Rotate {
-  color: white;
+  color: black;
   transform: skew(-61deg, 0deg) rotateX(180deg) scaleY(0.5);
   margin-right: 201px;
   margin-top: -90px;
@@ -64,6 +62,8 @@
   margin-top: 60px;
   font-weight: 400;
   width: 300px;
+  z-index: 99;
+  position: relative;
   line-height: 86%;
   letter-spacing: 5%;
   text-align: right;
@@ -95,6 +95,24 @@
   z-index: 5;
 }
 
+.bgForLight {
+  position: absolute;
+  width: 100%;
+  background: radial-gradient(
+    47.08% 35.08% at 76% 43%,
+    rgb(255, 19, 212),
+    rgb(255, 192, 193) 29%,
+    rgb(255, 41, 127) 50.798%,
+    rgb(0, 0, 0) 100%
+  );
+  top: 0;
+  z-index: 0;
+  left: 0;
+  height: 100%;
+  animation: bgPulse 3s infinite ease; /* Добавляем анимацию */
+}
+
+
 .Responds::after {
   content: "";
   bottom: 0;
@@ -112,7 +130,7 @@
 }
 .bottomElement {
   background: radial-gradient(
-    119.77% 94.05% at 117% -8%,
+    62.77% 67.05% at 66% -2%,
     rgb(255, 19, 212),
     rgb(0, 0, 0) 88%
   );
