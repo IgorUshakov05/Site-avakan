@@ -3,6 +3,7 @@ import ReviewItem from "../components/Review";
 import { useState, useEffect, useRef } from "react";
 import style from "@/app/style/Response.module.css";
 
+
 interface Review {
   client: string;
   message: string[];
@@ -28,11 +29,11 @@ function Response() {
 
         setScrollPosition((prevPosition) => {
           const newPosition = stop?prevPosition:prevPosition + 10 * scrollDirection;
-          elem.current.scrollTo({
-            top: newPosition,
-            behavior: "smooth",
-          });
-          return newPosition;
+            elem.current?.scrollTo({
+              top: newPosition,
+              behavior: "smooth",
+            });
+            return newPosition;
         });
       }
     };

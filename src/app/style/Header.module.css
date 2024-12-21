@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: black;
+  right: 0;
+  left: 0;
+}
+
+.headerContent {
+  padding: 10px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.listLink {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerContent::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: white;
+  width: 100%;
+}
+
+.nav {
+  width: 50%;
+}
+
+.linkItem {
+  font-family: "Unbounded";
+  font-weight: 300;
+  font-size: 10.7px;
+}
+.linkItem > a {
+  color: white;
+}

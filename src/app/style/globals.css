@@ -2,6 +2,109 @@
   padding: 0;
   margin: 0;
   outline: none;
+  text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+}
+:root {
+  --color1: rgb(255, 19, 212);
+  --color2: rgb(255, 192, 193);
+  --color3: rgb(255, 41, 127);
+  --color4: rgb(0, 0, 0);
+  --pos-x: 76%;
+  --pos-y: 43%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-Black.ttf") format("truetype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800; /* Extra Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200; /* Extra Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded/static/Unbounded-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* Semi Bold */
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Ruberoid';
+  src: url('/fonts/Ruberoid/Ruberoid-ExtraLight.ttf') format('truetype');
+  font-weight: 200; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ruberoid';
+  src: url('/fonts/Ruberoid/Ruberoid-ThinOblique.ttf') format('truetype');
+  font-weight: 100;
+  font-style: oblique;
+}
+
+
+@font-face {
+  font-family: 'Ruberoid';
+  src: url('/fonts/Ruberoid/Ruberoid-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'Ruberoid';
+  src: url('/fonts/Ruberoid/Ruberoid-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: oblique;
 }
