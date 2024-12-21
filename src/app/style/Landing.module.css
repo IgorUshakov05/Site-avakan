@@ -21,6 +21,16 @@
   width: 100%; /* Указываем, что текст должен занимать всю ширину */
   display: inline-block; /* Убедитесь, что работает масштабирование */
 }
+.content {
+  height: 100%;
+  display: flex;
+  position: relative;
+  height: 90%;
+  min-height: 600px;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  flex-direction: column;
+}
 
 .textBlock {
   display: flex;
@@ -46,12 +56,27 @@
   text-decoration-skip-ink: none;
 }
 
-
 .descriptionText > span {
-    color: white;
+  color: white;
 }
 .video {
-    margin-top: -70vh;
-    height: 40vh;
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1;
+  max-width: 600px;
+  max-height: 600px;
+  top: -50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 99;
+  left: 0;
 }
 
+.video > video {
+  width: 100%;
+  height: auto;
+
+  max-width: inherit;
+  max-height: inherit;
+}

@@ -5,6 +5,7 @@ interface Review {
 import style from '@/app/style/ResponseItem.module.css'
 const ReviewItem = ({ client, message }: Review) => {
   return (
+    
     <article className={`${style.item}`}>
       <header>
         <h2 className={`${style.client} ${style.colorWhite}`}>{client}</h2>

@@ -1,0 +1,104 @@
+.content {
+  height: 100vh;
+  background-color: black;
+  max-height: 800px;
+  padding-top: 50px;
+  margin: 100px 0;
+}
+
+.border {
+  border: 0.5px solid #ffffff;
+  height: 95%;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.text {
+  font-family: "Unbounded";
+  font-size: 13.91px;
+  font-weight: 300;
+  line-height: 17.25px;
+  z-index: 100;
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  width: 100%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.text > span {
+  color: #ff0000;
+}
+.centerAll {
+  height: 100%;
+  display: flex;
+  z-index: 99;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  position: absolute;
+  height: 100%;
+  margin: auto;
+  z-index: 2;
+  left: 0;
+  opacity: 0.8;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ff13d4 0%,
+    rgba(255, 19, 212, 0) 100%
+  );
+  aspect-ratio: 1;
+}
+.video {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: 80%;
+  aspect-ratio: 1;
+  z-index: 0;
+  transform: rotate(-17deg);
+  mix-blend-mode: screen;
+}
+
+.video > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.digitalText {
+  font-family: "Ruberoid";
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+  color: #ffffff; /* Белый текст */
+  z-index: 55;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  mix-blend-mode: difference; /* Цвет текста изменяется при пересечении с объектами на видео */
+}
+
+/* .center::after {
+    position: absolute;
+    content: '';
+    background: conic-gradient(from 180deg at 50% 50%, #FF13D4 0deg, rgba(40, 170, 153, 0.15) 291.63deg, #FF13D4 360deg);
+    width: 100%;
+    height: 100%;
+} */

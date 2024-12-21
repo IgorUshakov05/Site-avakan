@@ -1,5 +1,5 @@
 "use client";
-import ReviewItem from "../components/Review";
+import ReviewItem from "./Review";
 import { useState, useEffect, useRef } from "react";
 import style from "@/app/style/Response.module.css";
 

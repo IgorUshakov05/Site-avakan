@@ -1,0 +1,112 @@
+.content {
+  height: 100vh;
+  background-color: black;
+  max-height: 900px;
+  padding-top: 50px;
+  margin: 60px 0;
+}
+
+.twoBlocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+  max-height: 700px;
+  height: 100%;
+  flex-direction: row;
+}
+
+.other {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.abakan {
+  height: auto;
+  width: 40%;
+}
+.abakan > img {
+  width: 100%;
+}
+
+.title {
+  font-family: "Ruberoid";
+  font-size: 90px;
+  font-weight: 900;
+  color: white;
+  padding: 15px 0 15px 25px;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+}
+
+.empty {
+  height: 100%;
+  width: 30%;
+}
+.aboutText {
+  height: 100%;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.infoAbout {
+  display: flex;
+  box-sizing: border-box;
+  height: max-content;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.descriptionItem {
+  font-family: "Unbounded";
+  font-size: 13.91px;
+  font-weight: 300;
+  line-height: 17.25px;
+  color: white;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.workWithOut {
+  font-family: "Ruberoid";
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 49.5px;
+  color: white;
+  letter-spacing: 0.07em;
+  margin-bottom: 60px;
+  text-align: left;
+  text-transform: uppercase;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.twoColumn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.twoColumn > div {
+    width: 48%;
+}
+.workWithOut > span,
+.defaultText > span {
+  color: #ff0000;
+}
+
+.defaultText {
+  font-family: "Unbounded";
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 14.71px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

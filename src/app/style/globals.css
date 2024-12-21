@@ -6,15 +6,9 @@
   list-style: none;
   box-sizing: border-box;
 }
-:root {
-  --color1: rgb(255, 19, 212);
-  --color2: rgb(255, 192, 193);
-  --color3: rgb(255, 41, 127);
-  --color4: rgb(0, 0, 0);
-  --pos-x: 76%;
-  --pos-y: 43%;
+body {
+  background-color:black;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
