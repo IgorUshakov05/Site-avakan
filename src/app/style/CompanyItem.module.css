@@ -1,0 +1,18 @@
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+}
+
+.titleCompany {
+  font-family: 'Unbounded';
+  font-size: 14.29px;
+  font-weight: 300;
+  line-height: 17.72px;
+  text-align: left;
+  color: white;
+  margin-left: 12px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

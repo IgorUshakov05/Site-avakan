@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Landing } from "./blocks/SiteAbakan";
 import { WhoIam } from "./blocks/WhoIam";
 import { NewDigital } from "./blocks/NewWeb";
+import { Works } from "./blocks/Terminal";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Landing />
       <WhoIam />
       <NewDigital />
+      <Works />
       <Response />
     </>
   );

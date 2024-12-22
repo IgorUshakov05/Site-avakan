@@ -71,12 +71,14 @@
   height: 80%;
   aspect-ratio: 1;
   z-index: 0;
+  background: none;
   transform: rotate(-17deg);
   mix-blend-mode: screen;
 }
 
 .video > video {
   height: 100%;
+  background:none;
   width: 100%;
   object-fit: cover;
 }
@@ -92,9 +94,8 @@
   position: relative;
   text-transform: uppercase;
   text-align: center;
-  mix-blend-mode: difference; /* Цвет текста изменяется при пересечении с объектами на видео */
+  mix-blend-mode: difference; 
 }
-
 /* .center::after {
     position: absolute;
     content: '';

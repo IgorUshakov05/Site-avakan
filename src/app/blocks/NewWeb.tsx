@@ -10,6 +10,7 @@ enum Variant {
 }
 export const NewDigital = () => {
   let [text, setText] = useState(Variant.one);
+  let [isLoad, setLoad] = useState(false);
   useEffect(() => {
     let values = Object.values(Variant);
     let index = 0;
@@ -23,13 +24,14 @@ export const NewDigital = () => {
     <article className={style.content}>
       <div className={`container ${style.border}`}>
         <span className={style.text}>
-          Хакасия — Абакан — <span>{text}</span>
+          Хакасия — Абакан — <span>{text}</span> 
         </span>
         <div className={style.centerAll}>
           <div className={style.video}>
             <video
               src="/video/infinity.webm"
               autoPlay
+              onLoad={() => setLoad(true)}
               muted
               loop
               playsInline
