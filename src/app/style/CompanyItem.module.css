@@ -6,10 +6,12 @@
 }
 
 .titleCompany {
-  font-family: 'Unbounded';
+  font-family: "Unbounded";
   font-size: 14.29px;
   font-weight: 300;
   line-height: 17.72px;
+  mix-blend-mode:по screen;
+
   text-align: left;
   color: white;
   margin-left: 12px;

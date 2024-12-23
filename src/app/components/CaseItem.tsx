@@ -1,5 +1,6 @@
 import Company from "@/app/components/CompanyCase";
 import style from "@/app/style/WorkCase.module.css";
+import { useEffect, useState } from "react";
 
 interface Company {
   descriptionCase: string;
@@ -19,11 +20,40 @@ interface CaseItemProps {
 }
 
 export default function CaseItem({ company }: CaseItemProps) {
+  const [change, setChange] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setChange(false);
+    }, 1000);
+    const timerShow = setTimeout(() => {
+      setChange(true);
+    }, 500);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(timerShow);
+    };
+  }, [company]);
+
   return (
     <div className={style.mainContent}>
-      <h2 className={style.descriptionCase}>{company.descriptionCase}</h2>
+      <h2
+        className={`${style.descriptionCase} ${
+          change ? style.descriptionCaseChange : ""
+        }`}
+      >
+        {company.descriptionCase}
+      </h2>
       <div className={style.pic}>
-        <img src={`/casePicture/${company.casePicture}`} alt="Картинка кейса" />
+        <video
+          src={`/video/${company.casePicture}`}
+          loop
+          muted
+          autoPlay
+          playsInline
+          className={`${style.caseVideo} ${change ? style.changeVideo : ""}`}
+        />
       </div>
       <div className={style.bottomContent}>
         <Company

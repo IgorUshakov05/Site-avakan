@@ -1,7 +1,7 @@
 "use client";
 
 import style from "@/app/style/WorkCase.module.css";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import CaseItem from "@/app/components/CaseItem";
 import { Cursor } from "@/app/components/cursor";
 
@@ -17,12 +17,14 @@ enum WayCursor {
 }
 
 export const Works = () => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorTarget, setCursorTarget] = useState({ x: 0, y: 0 }); // Целевая позиция
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 }); // Текущая позиция
+  const [showCursor, setShowCursor] = useState(false);
   const [isClick, setClick] = useState(false);
-  let [selected, changeCase] = useState(0);
+  const [selected, changeCase] = useState(0);
   const [isRigth, setPosition] = useState(WayCursor.Right);
   const elem = useRef<HTMLDivElement>(null);
-  const [companyList, setCompany] = useState([
+  const [companyList] = useState([
     {
       titleCompany: "ПАО Росбанк",
       descriptionCase: `Терминал выдачи талонов`,
@@ -32,7 +34,7 @@ export const Works = () => {
         { icon: Media.github, href: "#" },
         { icon: Media.behance, href: "#" },
       ],
-      casePicture: "RosbankCase.png",
+      casePicture: "rosbank.webm",
     },
     {
       titleCompany: "ПАО Росбанк",
@@ -43,7 +45,7 @@ export const Works = () => {
         { icon: Media.github, href: "#" },
         { icon: Media.behance, href: "#" },
       ],
-      casePicture: "Money.png",
+      casePicture: "p-bank.webm",
     },
     {
       titleCompany: "Hunt",
@@ -54,28 +56,45 @@ export const Works = () => {
         { icon: Media.github, href: "#" },
         { icon: Media.behance, href: "#" },
       ],
-      casePicture: "WebHunt.png",
+      casePicture: "webhunt.webm",
     },
   ]);
+
   const handleMouseMove = (event: React.MouseEvent) => {
-    if (!elem.current) return; // Проверяем, что элемент существует
+    if (!elem.current) return;
 
     const { left, top, width, height } = elem.current.getBoundingClientRect();
     const offsetX = event.clientX - left;
     const offsetY = event.clientY - top;
 
-    // Определяем направление курсора относительно центра
     setPosition(offsetX < width / 2 ? WayCursor.Left : WayCursor.Right);
-    // Обновляем позицию курсора в процентах
-    setCursorPosition({
+    setCursorTarget({
       x: (offsetX / width) * 100,
       y: (offsetY / height) * 100,
     });
   };
+
   function changeCaseClick(event: React.MouseEvent) {
     event.preventDefault();
     setClick(true);
   }
+
+  useEffect(() => {
+    let animationFrameId: number;
+
+    const smoothCursor = () => {
+      setCursorPosition((prev) => ({
+        x: prev.x + (cursorTarget.x - prev.x) * 0.1, 
+        y: prev.y + (cursorTarget.y - prev.y) * 0.1, 
+      }));
+      animationFrameId = requestAnimationFrame(smoothCursor);
+    };
+
+    animationFrameId = requestAnimationFrame(smoothCursor);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [cursorTarget]);
+
   return (
     <article
       className={style.content}
@@ -95,20 +114,25 @@ export const Works = () => {
         className={style.flexFullScreen}
         onMouseMove={handleMouseMove}
         ref={elem}
+        onMouseEnter={() => setShowCursor(true)}
+        onMouseLeave={() => setShowCursor(false)}
         style={{ position: "relative" }}
       >
-        <div
-          className={style.cursor}
-          style={{
-            position: "absolute",
-            left: `${cursorPosition.x - 3.7}%`,
-            top: `${cursorPosition.y - 6}%`,
-            zIndex: "99",
-            pointerEvents: "none",
-          }}
-        >
-          <Cursor way={isRigth} isClick={isClick} />
-        </div>
+        {showCursor && (
+          <div
+            className={style.cursor}
+            style={{
+              opacity: showCursor ? 1 : 0,
+              position: "absolute",
+              left: `${cursorPosition.x - 3.7}%`,
+              top: `${cursorPosition.y - 6}%`,
+              zIndex: "99",
+              pointerEvents: "none",
+            }}
+          >
+            <Cursor way={isRigth} isClick={isClick} />
+          </div>
+        )}
 
         <div className={style.topContent}>
           <h2>Работы</h2>

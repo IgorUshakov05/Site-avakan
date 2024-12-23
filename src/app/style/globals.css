@@ -5,6 +5,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  transition: 0.5s;
 }
 video::-webkit-media-controls-play-button {
   display: none;

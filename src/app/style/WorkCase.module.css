@@ -36,14 +36,20 @@
   width: 100%;
   height: 300px;
 }
-.pic > img {
+.pic > video {
   position: absolute;
   right: 0;
   left: 0;
   top: -20px;
+  opacity: 1;
+  transition: 1s;
   bottom: 0;
   max-width: 40%;
   margin: auto;
+}
+.changeVideo {
+  top: 100px !important;
+  opacity: 0 !important;
 }
 .caseLink {
   margin-left: 15px;
@@ -58,11 +64,17 @@
   text-transform: uppercase;
   font-weight: 800;
   line-height: 99px;
+  transition: 1s;
   letter-spacing: 0.07em;
+  opacity: 1;
   color: white;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+.descriptionCaseChange {
+  margin-top: -200px !important;
+  opacity: 0 !important;
 }
 
 .description {

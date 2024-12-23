@@ -12,7 +12,9 @@ export const Cursor = ({
   way: WayCursor;
   isClick: boolean;
 }) => {
-  useEffect(() => {}, [isClick, way]);
+  useEffect(() => {
+    console.log('Курсор')
+  }, [isClick, way]);
   return (
     <>
       <svg
@@ -37,16 +39,12 @@ export const Cursor = ({
             width="101.449"
             height="101.449"
             rx="50.7244"
-            stroke={
-              isClick ? (way === WayCursor.Right ? "red" : "blue") : "#9F9F9F"
-            }
+            stroke={isClick ? "red" : "#9F9F9F"}
             strokeWidth="0.571543"
           />
           <path
             d="M43.7944 36.5789L58.2259 51.0103L43.7944 65.4418"
-            stroke={
-              isClick ? (way === WayCursor.Right ? "red" : "blue") : "#9F9F9F"
-            }
+            stroke={isClick ? "red" : "#9F9F9F"}
             strokeWidth="1.71463"
           />
         </g>
