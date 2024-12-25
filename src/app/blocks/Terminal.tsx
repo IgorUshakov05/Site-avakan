@@ -126,6 +126,7 @@ export const Works = () => {
               position: "absolute",
               left: `${cursorPosition.x - 3.7}%`,
               top: `${cursorPosition.y - 6}%`,
+              transition: "0s",
               zIndex: "99",
               pointerEvents: "none",
             }}
