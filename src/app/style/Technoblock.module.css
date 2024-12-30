@@ -1,0 +1,56 @@
+.technologe {
+  height: 100vh;
+  max-width: 1200px;
+  max-height: 700px;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: right;
+  width: 90%;
+  font-family: "Ruberoid";
+  font-size: 100px;
+  color: white;
+  font-weight: 600;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.list {
+  display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+.defaultText {
+  font-family: "Unbounded";
+  font-size: 13.91px;
+  font-weight: 400;
+  color: white;
+  line-height: 17.25px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.visual,
+.team,
+.rigth,
+.software {
+  width: 50%;
+}
+.rigth {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}

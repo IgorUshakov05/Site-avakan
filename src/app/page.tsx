@@ -5,6 +5,7 @@ import { WhoIam } from "./blocks/WhoIam";
 import { NewDigital } from "./blocks/NewWeb";
 import { Works } from "./blocks/Terminal";
 import { MoreAboutCase } from "./blocks/MoreAboutCase";
+import Technologe from "./blocks/Technologe";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <NewDigital />
       <Works />
       <MoreAboutCase />
+      <Technologe />
       <Response />
     </>
   );
