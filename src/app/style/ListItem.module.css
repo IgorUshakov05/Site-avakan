@@ -1,0 +1,11 @@
+.item {
+  border: 1px solid #ff0000;
+  border-radius:30px;
+  color: white;
+  font-family: 'Unbounded';
+  width: fit-content;
+  padding: 13px 15px;
+  font-size: 13.91px;
+  font-weight: 300;
+  line-height: 17.25px;
+}

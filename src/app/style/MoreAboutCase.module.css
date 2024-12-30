@@ -1,0 +1,7 @@
+.content {
+  height: fit-content;
+  /* background-color: red; */
+  margin: 100px 0;
+  max-width: 1200px;
+  margin: auto;
+}

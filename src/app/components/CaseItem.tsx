@@ -39,9 +39,7 @@ export default function CaseItem({ company }: CaseItemProps) {
   return (
     <div className={style.mainContent}>
       <h2
-        className={`${style.descriptionCase} ${
-          change ? style.descriptionCaseChange : ""
-        }`}
+        className={`${style.descriptionCase}`}
       >
         {company.descriptionCase}
       </h2>

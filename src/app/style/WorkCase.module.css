@@ -52,7 +52,12 @@
   opacity: 0 !important;
 }
 .caseLink {
+  width: fit-content;
+  height: fit-content;
   margin-left: 15px;
+}
+.caseLink:hover {
+  background-color:red;
 }
 .caseLink > a {
   display: block;

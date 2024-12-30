@@ -5,11 +5,7 @@ import { useRef, useState, useEffect } from "react";
 import CaseItem from "@/app/components/CaseItem";
 import { Cursor } from "@/app/components/cursor";
 
-enum Media {
-  github = "social/github.svg",
-  behance = "social/behance.svg",
-  dprofile = "social/dprofile.svg",
-}
+import { Media } from "../types/EnumMedia";
 
 enum WayCursor {
   Left,
@@ -84,8 +80,8 @@ export const Works = () => {
 
     const smoothCursor = () => {
       setCursorPosition((prev) => ({
-        x: prev.x + (cursorTarget.x - prev.x) * 0.1, 
-        y: prev.y + (cursorTarget.y - prev.y) * 0.1, 
+        x: prev.x + (cursorTarget.x - prev.x) * 0.1,
+        y: prev.y + (cursorTarget.y - prev.y) * 0.1,
       }));
       animationFrameId = requestAnimationFrame(smoothCursor);
     };
