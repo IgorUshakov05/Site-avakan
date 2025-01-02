@@ -49,7 +49,13 @@ function Technologe() {
           </div>
           <div className={style.team}>
             <div className={style.imageWrapper}>
-              <img src="aw" alt="" className={style.image} />
+              <video
+                src="/video/brain.webm"
+                muted
+                autoPlay
+                loop
+                className={style.video}
+              />
             </div>
             <p className={style.defaultText}>
               Наша команда профессионалов владеет всеми необходимыми

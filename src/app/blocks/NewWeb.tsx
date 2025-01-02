@@ -30,9 +30,9 @@ export const NewDigital = () => {
           <div className={style.video}>
             <video
               src="/video/infinity.webm"
-              autoPlay
               onLoad={() => setLoad(true)}
               muted
+              autoPlay
               loop
               playsInline
             ></video>

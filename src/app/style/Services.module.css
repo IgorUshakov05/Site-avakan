@@ -1,0 +1,76 @@
+.content {
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  max-width: 1200px;
+}
+
+.blocks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sectionTitle {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-family: "Unbounded";
+  font-size: 13.91px;
+  font-weight: 400;
+  line-height: 17.25px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.sectionTitle,
+.priceTitle,
+.planItem,
+.title,
+.priceDetails,
+.planTitle {
+  color: white;
+}
+.priceDetails {
+  font-family: Ruberoid;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 8px;
+  text-transform: uppercase;
+
+  line-height: 49.5px;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.priceTitle {
+  font-family: "Unbounded";
+  font-size: 13.91px;
+  font-weight: 400;
+  line-height: 17.25px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.title {
+  font-family: "Ruberoid";
+  font-size: 90px;
+  width: 75.5%;
+  font-weight: 800;
+  line-height: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.serviceVideo {
+    width: 100%;
+}
+.w50 {
+  width: 50%;
+}
+.block,
+.mt50 {
+  margin-top: 30px;
+}
