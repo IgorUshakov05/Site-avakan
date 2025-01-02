@@ -7,6 +7,7 @@ import { Works } from "./blocks/Terminal";
 import { MoreAboutCase } from "./blocks/MoreAboutCase";
 import Technologe from "./blocks/Technologe";
 import Services from "./blocks/Services";
+import FeedBack from "./blocks/Feedback";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <MoreAboutCase />
       <Technologe />
       <Services />
+      <FeedBack />
       <Response />
     </>
   );

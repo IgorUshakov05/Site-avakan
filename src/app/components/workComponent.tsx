@@ -1,6 +1,6 @@
 import style from "@/app/style/workComponent.module.css";
-import typeServiceList from "@/app/types/serviceItemList";
-function WorkComponent(obj: typeServiceList) {
+import {ListItem} from "@/app/types/serviceItemList";
+function WorkComponent(obj: ListItem) {
   return (
     <div className={style.block}>
       <h4 className={style.planTitle}>{obj.title}</h4>

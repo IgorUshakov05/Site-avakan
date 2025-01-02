@@ -1,0 +1,157 @@
+.content {
+  height: 100vh;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  max-height: 800px;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 100px auto;
+}
+.title {
+  font-family: 'Ruberoid';
+  font-size: 100px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainContent,
+.header {
+  width: 50%;
+}
+.list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.listItem {
+  width: 100%;
+  border: 0.5px solid #ffffff80;
+  border-right: none;
+  border-left: none;
+}
+.listItem:nth-child(1) {
+  border-bottom: 0.5px solid #ffffff80;
+  border-top: none;
+  padding-bottom: 40px;
+}
+
+.listItem:nth-child(3) {
+  border-top: 1px solid #ffffff80;
+}
+.email,
+.socialList {
+  padding: 30px 0;
+}
+.emailLink {
+  font-family: "Ruberoid";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 39.6px;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff80;
+}
+.topContentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 19px;
+}
+.socialLink {
+  font-family: "Ruberoid";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 49.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: left;
+  color: white;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.topContentTitle > span {
+  font-family: "Unbounded";
+  font-size: 10px;
+  color: #ffffff80;
+  font-weight: 400;
+  line-height: 14.71px;
+  margin-top: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.socialItem {
+  width: fit-content;
+}
+.socialList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+.telegram {
+  background: radial-gradient(
+    58.28% 756.46% at 50% 50%,
+    #e0e0e0 0%,
+    #ffffff 19.34%,
+    #4772ff 51.63%,
+    #bcbcbc 68.22%,
+    #e8e8e8 89%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.whatsapp {
+  background: conic-gradient(
+    from 172.77deg at 52.92% 100%,
+    #e0e0e0 0deg,
+    #ffffff 69.64deg,
+    #d0ffc1 151.13deg,
+    #72ff47 185.89deg,
+    #bcbcbc 245.6deg,
+    #e8e8e8 313.3deg,
+    #00ff4d 335.72deg,
+    #e0e0e0 360deg
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.link {
+  font-family: "Unbounded";
+  font-size: 13.91px;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 17.25px;
+  text-align: left;
+  color: #ffffff80;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
