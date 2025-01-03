@@ -3,12 +3,12 @@ import serviceItem from "@/app/data/Service";
 import TypeJob from "../components/TypeJob";
 function Services() {
   return (
-    <div className={style.content}>
+    <article className={style.content}>
       <h2 className={style.sectionTitle}>Что же мы умеем</h2>
-      {serviceItem.map((item) => (
-        <TypeJob {...item} />
+      {serviceItem.map((item, index) => (
+        <TypeJob {...item} key={index} />
       ))}
-    </div>
+    </article>
   );
 }
 

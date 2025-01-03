@@ -106,6 +106,9 @@
 .socialItem {
   width: fit-content;
 }
+.listItem:hover {
+  border-color: red;
+}
 .socialList {
   display: flex;
   flex-wrap: wrap;

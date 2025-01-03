@@ -1,0 +1,245 @@
+.content {
+  height: 100vh;
+  max-width: 1200px;
+  max-height: 800px;
+  box-sizing: border-box;
+  margin: 100px auto;
+}
+
+.parentTitle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+.main {
+  margin-top: 30px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.flex > div {
+  width: 50%;
+}
+
+.value {
+  font-family: "Ruberoid";
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+  color: white;
+  background: none;
+  max-width: 100%;
+  border: none;
+  text-align: right;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.title {
+  font-family: "Ruberoid";
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 99px;
+  width: 75%;
+
+  letter-spacing: 0.07em;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.describe {
+  color: white;
+  font-family: "Unbounded";
+  margin-top: 40px;
+  font-size: 10px;
+  font-weight: 300;
+  width: 75%;
+
+  line-height: 14.71px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.textarea {
+  border: 1px solid white;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  resize: none;
+  min-height: 120px;
+  font-family: "Unbounded";
+  font-size: 10px;
+  font-weight: 300;
+  background-color: black;
+  line-height: 14.71px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.textareaParent {
+  position: relative;
+}
+.default {
+  color: #ffffffc2;
+  font-family: "Unbounded";
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 14.71px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.inputs {
+  display: flex;
+  gap: 13px;
+  justify-content: space-between;
+  align-items: center;
+}
+.input {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+  bottom: 0;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+.selectItem {
+  border: 0.4px solid white;
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.star {
+  font-family: "Ruberoid";
+  color: #ff0000;
+  font-size: 50px;
+  font-weight: 800;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  line-height: 49.5px;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.selectValue {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1px;
+  border-radius: 10px;
+}
+
+.selectValue::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Убираем стандартный стиль браузера */
+  appearance: none;
+  width: 15px; /* Ширина ползунка */
+  height: 15px; /* Высота ползунка */
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.selectValue::-moz-range-thumb:hover {
+  background: #45a049;
+}
+
+.sendQuery {
+  font-family: "Unbounded";
+  font-size: 10px;
+  background: #ff0000;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 300;
+  line-height: 14.71px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.defaultStar {
+  position: relative;
+  right: 0;
+  top: 10px;
+}
+.text {
+  justify-content: space-between;
+}
+
+.input:checked + .selectItem {
+  background: red;
+  border-color: red;
+}
+
+.fileTZ {
+  margin-top: 30px;
+}
+.inputLink {
+  min-height: fit-content;
+  padding: 12px;
+  margin-top: 15px;
+}
+.video {
+  height: fit-content;
+  margin-top: 34px;
+}
+.video > video {
+  width: 100%;
+}
+.center {
+  align-items: flex-start;
+}
+
+.inputFIle {
+  border: 1px dashed #ffffffb5;
+  margin-top: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+.textAndDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.textAndDown > .default {
+  width: 50%;
+  text-align: center;
+}
+
+.file {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: red;
+}
