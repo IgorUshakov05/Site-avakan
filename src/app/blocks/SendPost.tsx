@@ -97,7 +97,8 @@ function SendPost() {
 }
 
 const Right = () => {
-  let [buget, setBuget] = useState("5000");
+  let [value, setValue] = useState(0);
+  let [buget, setBuget] = useState("0");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Получаем введённое значение
     const rawValue = e.target.value.replace(/\s/g, "");
@@ -105,6 +106,7 @@ const Right = () => {
     if (!isNaN(Number(rawValue))) {
       const formattedValue = Number(rawValue).toLocaleString("ru-RU");
       setBuget(formattedValue);
+      setValue(Number(rawValue));
     }
   };
 
@@ -123,7 +125,16 @@ const Right = () => {
       <div className={`${style.buget} ${style.main}`}>
         <span className={style.default}>Укажите бюджет</span>
         <div>
-          <input type="range" name="" className={style.selectValue} id="" />
+          <input
+            type="range"
+            name=""
+            className={style.selectValue}
+            id=""
+            value={value}
+            min={10000}
+            max={1000000}
+            onChange={handleInputChange}
+          />
         </div>
         <div>
           <input
