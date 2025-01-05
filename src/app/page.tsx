@@ -22,8 +22,8 @@ export default function Home() {
       <Technologe />
       <Services />
       <SendPost />
-      <FeedBack />
       <Response />
+      <FeedBack />
     </>
   );
 }

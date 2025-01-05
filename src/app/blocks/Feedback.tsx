@@ -37,7 +37,7 @@ const Arrow = ({ color = "white" }: { color?: string }) => {
 };
 function FeedBack() {
   return (
-    <section className={style.content}>
+    <section className={style.content} id="contact">
       <div className={style.container}>
         <header className={style.header}>
           <h1 className={style.title}>Связь</h1>
