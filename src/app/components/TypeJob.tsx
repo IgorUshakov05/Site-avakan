@@ -1,5 +1,5 @@
 import style from "@/app/style/TypeJob.module.css";
-import {ItemWork} from "@/app/types/serviceItemList";
+import { ItemWork } from "@/app/types/serviceItemList";
 import WorkComponent from "./workComponent";
 export default function TypeJob(obj: ItemWork) {
   return (
@@ -33,9 +33,13 @@ export default function TypeJob(obj: ItemWork) {
             <span className={style.price}>{obj.price}</span>
             <span className={style.duration}>{obj.time}</span>
           </div>
-          {obj.listWork.map((item, index) => ( 
-             <WorkComponent sevice={item.sevice} title={item.title} />
-          ))} 
+          {obj.listWork.map((item, index) => (
+            <WorkComponent
+              sevice={item.sevice}
+              key={index}
+              title={item.title}
+            />
+          ))}
         </div>
       </div>
     </article>

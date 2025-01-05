@@ -3,7 +3,6 @@ import ReviewItem from "./Review";
 import { useState, useEffect, useRef } from "react";
 import style from "@/app/style/Response.module.css";
 
-
 interface Review {
   client: string;
   message: string[];
@@ -28,12 +27,14 @@ function Response() {
         }
 
         setScrollPosition((prevPosition) => {
-          const newPosition = stop?prevPosition:prevPosition + 10 * scrollDirection;
-            elem.current?.scrollTo({
-              top: newPosition,
-              behavior: "smooth",
-            });
-            return newPosition;
+          const newPosition = stop
+            ? prevPosition
+            : prevPosition + 10 * scrollDirection;
+          elem.current?.scrollTo({
+            top: newPosition,
+            behavior: "smooth",
+          });
+          return newPosition;
         });
       }
     };
@@ -42,7 +43,7 @@ function Response() {
     return () => {
       clearInterval(timer);
     };
-  }, [scrollDirection,stop]);
+  }, [scrollDirection, stop]);
   useEffect(() => {
     setReviews([
       {
@@ -117,8 +118,19 @@ function Response() {
           </div>
         </div>
         <div className={`${style.bg}`}></div>
-        <div className={`${style.bgForLight}`}></div>
-            
+        <div
+          className={`${style.bgForLight}`}
+          style={{
+            background: `radial-gradient(
+    52% 57% at 66.42% 60.03%,
+    #ffffff -14%,
+    #ffc0c1 21.85%,
+    #ff297f 43.55%,
+    #000000 100%
+  );`,
+          }}
+        ></div>
+
         <div className={`${style.bottomElement}`}>
           <div className={`${style.SAbox}`}>
             <span className={`${style.SA}`}>SA</span>
