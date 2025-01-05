@@ -5,7 +5,7 @@ export const Header = () => {
     <header className={`${style.header}`}>
       <div className={`container ${style.headerContent}`}>
         <div>
-          <a href="/">
+          <a href="#main">
             <img src="/logo.svg" alt="Логотип" />
           </a>
         </div>
@@ -13,19 +13,19 @@ export const Header = () => {
           <nav>
             <ul className={style.listLink}>
               <li className={style.linkItem}>
-                <a href="">Веб-студия</a>
+                <a href="#about">Веб-студия</a>
               </li>
               <li className={style.linkItem}>
-                <a href="">Портфолио</a>
+                <a href="#case">Портфолио</a>
               </li>
               <li className={style.linkItem}>
-                <a href="">Услуги</a>
+                <a href="#services">Услуги</a>
               </li>
               <li className={style.linkItem}>
-                <a href="">Отзывы</a>
+                <a href="#reviews">Отзывы</a>
               </li>
               <li className={style.linkItem}>
-                <a href="">Связаться</a>
+                <a href="#contact">Связаться</a>
               </li>
             </ul>
           </nav>

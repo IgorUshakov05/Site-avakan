@@ -2,7 +2,7 @@ import style from "@/app/style/Landing.module.css";
 
 export const Landing = () => {
   return (
-    <article className={style.landing}>
+    <article className={style.landing} id="main">
       <div className={`container ${style.content}`}>
         <div className={style.video}>
           <video src="/video/Ленд.webm" autoPlay muted loop playsInline></video>

@@ -2,7 +2,7 @@ import style from "@/app/style/WhoIam.module.css";
 
 export const WhoIam = () => {
   return (
-    <article className={style.content}>
+    <article className={style.content} id="about">
       <div className={`container ${style.twoBlocks}`}>
         <div className={style.abakan}>
           <img src="/abakan.png" alt="Фото абакана" />

@@ -3,6 +3,8 @@
   margin: 0;
   outline: none;
   text-decoration: none;
+  scroll-padding-top: 50px;
+  scroll-behavior: smooth;
   list-style: none;
   box-sizing: border-box;
   transition: 0.5s;
@@ -110,6 +112,6 @@ body {
   font-style: oblique;
 }
 
-img{
+img {
   user-select: none;
 }

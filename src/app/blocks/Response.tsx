@@ -93,7 +93,7 @@ function Response() {
   }
   return (
     <>
-      <div className={`${style.Response}`}>
+      <article className={`${style.Response}`} id="reviews">
         <div className={`${style.MainWidth}`}>
           <div
             className={`${style.Responds}`}
@@ -137,7 +137,7 @@ function Response() {
             <span className={`${style.SA_Rotate}`}>SA</span>
           </div>
         </div>
-      </div>
+      </article>
     </>
   );
 }

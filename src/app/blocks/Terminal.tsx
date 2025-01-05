@@ -92,7 +92,7 @@ export const Works = () => {
   }, [cursorTarget]);
 
   return (
-    <article
+    <article id="case"
       className={style.content}
       onMouseDown={changeCaseClick}
       onMouseUp={() => {
