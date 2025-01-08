@@ -33,7 +33,7 @@ export const Works = () => {
       casePicture: "rosbank.webm",
     },
     {
-      titleCompany: "ПАО Росбанк",
+      titleCompany: "P-Bank",
       descriptionCase: `Дизайн приложения`,
       companyIcon: "pBank.svg",
       media: [

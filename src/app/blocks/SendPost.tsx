@@ -99,14 +99,22 @@ function SendPost() {
 const Right = () => {
   let [value, setValue] = useState(0);
   let [buget, setBuget] = useState("0");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // Получаем введённое значение
     const rawValue = e.target.value.replace(/\s/g, "");
 
     if (!isNaN(Number(rawValue))) {
-      const formattedValue = Number(rawValue).toLocaleString("ru-RU");
+      const numericValue = Number(rawValue);
+      let formattedValue = numericValue.toLocaleString("ru-RU");
+
+      if (numericValue >= 1000000) {
+        formattedValue = numericValue / 1000000 + "м";
+      } else if (numericValue >= 100000 && numericValue % 100000 === 0) {
+        formattedValue = numericValue / 1000 + "к";
+      }
+
       setBuget(formattedValue);
-      setValue(Number(rawValue));
+      setValue(numericValue);
     }
   };
 
