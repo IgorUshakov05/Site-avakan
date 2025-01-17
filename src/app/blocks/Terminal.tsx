@@ -92,18 +92,21 @@ export const Works = () => {
   }, [cursorTarget]);
 
   return (
-    <article id="case"
+    <article
+      id="case"
       className={style.content}
       onMouseDown={changeCaseClick}
       onMouseUp={() => {
         const lengthList = companyList.length;
-        changeCase(
-          isRigth
-            ? (selected + 1) % lengthList
-            : (selected - 1 + lengthList) % lengthList
-        );
+        setTimeout(() => {
+          changeCase(
+            isRigth
+              ? (selected + 1) % lengthList
+              : (selected - 1 + lengthList) % lengthList
+          );
 
-        setClick(false);
+          setClick(false);
+        }, 1000);
       }}
     >
       <div

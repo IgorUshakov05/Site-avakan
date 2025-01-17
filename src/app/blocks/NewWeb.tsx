@@ -29,7 +29,7 @@ export const NewDigital = () => {
         <div className={style.centerAll}>
           <div className={style.video}>
             <video
-              src="/video/infinity.webm"
+              src="/video/Infinity.webm"
               onLoad={() => setLoad(true)}
               muted
               autoPlay
