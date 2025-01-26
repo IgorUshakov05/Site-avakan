@@ -32,7 +32,7 @@
 }
 .pic {
   position: relative;
-  z-index:1;
+  z-index: 1;
   width: 100%;
   height: 300px;
 }
@@ -41,15 +41,14 @@
   right: 0;
   left: 0;
   top: -20px;
+  transition: opacity 0.5s ease-in-out;
   opacity: 1;
-  transition: 1s;
   bottom: 0;
   max-width: 40%;
   margin: auto;
 }
-.changeVideo {
-  top: 100px !important;
-  opacity: 0 !important;
+.pic > video.fade {
+  opacity: 0;
 }
 .caseLink {
   width: fit-content;
@@ -77,6 +76,9 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+.descriptionCase.fade {
+  opacity: 0;
 }
 .descriptionCaseChange {
   margin-top: -200px !important;

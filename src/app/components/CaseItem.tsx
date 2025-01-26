@@ -20,37 +20,33 @@ interface CaseItemProps {
 }
 
 export default function CaseItem({ company }: CaseItemProps) {
-  const [change, setChange] = useState(false);
+  const [isFading, setIsFading] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(company.casePicture);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setChange(false);
-    }, 1000);
-    const timerShow = setTimeout(() => {
-      setChange(true);
+    setIsFading(true); // Начинаем затемнение
+
+    const fadeTimer = setTimeout(() => {
+      setCurrentVideo(company.casePicture);
+      setIsFading(false);
     }, 500);
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(timerShow);
+      clearTimeout(fadeTimer);
     };
   }, [company]);
 
   return (
     <div className={style.mainContent}>
-      <h2
-        className={`${style.descriptionCase}`}
-      >
-        {company.descriptionCase}
-      </h2>
+      <h2 className={`${style.descriptionCase}`}>{company.descriptionCase}</h2>
       <div className={style.pic}>
         <video
-          src={`/video/${company.casePicture}`}
+          src={`/video/${currentVideo}`}
           loop
           muted
           autoPlay
           playsInline
-          className={`${style.caseVideo} ${change ? style.changeVideo : ""}`}
+          className={`${style.caseVideo} ${isFading ? style.fade : ""}`}
         />
       </div>
       <div className={style.bottomContent}>

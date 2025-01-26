@@ -5,7 +5,7 @@ export const Header = () => {
     <header className={`${style.header}`}>
       <div className={`container ${style.headerContent}`}>
         <div>
-          <a href="#main">
+          <a href="/">
             <img src="/logo.svg" alt="Логотип" />
           </a>
         </div>

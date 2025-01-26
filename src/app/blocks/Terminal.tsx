@@ -98,15 +98,13 @@ export const Works = () => {
       onMouseDown={changeCaseClick}
       onMouseUp={() => {
         const lengthList = companyList.length;
-        setTimeout(() => {
-          changeCase(
-            isRigth
-              ? (selected + 1) % lengthList
-              : (selected - 1 + lengthList) % lengthList
-          );
+        changeCase(
+          isRigth
+            ? (selected + 1) % lengthList
+            : (selected - 1 + lengthList) % lengthList
+        );
 
-          setClick(false);
-        }, 1000);
+        setClick(false);
       }}
     >
       <div
