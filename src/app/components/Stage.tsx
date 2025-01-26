@@ -1,15 +1,15 @@
 "use client";
 import { Cursor } from "@/app/components/cursor";
-
+import { processImprovement } from "@/app/data/CaseWorks";
 import style from "@/app/style/CasePage.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 
 export default function Stage() {
   enum WayCursor {
     Left,
     Right,
   }
-
+  let [indexActive, setIndex] = useState(0);
   const [cursorTarget, setCursorTarget] = useState({ x: 0, y: 0 }); // Целевая позиция
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 }); // Текущая позиция
   const [showCursor, setShowCursor] = useState(false);
@@ -33,6 +33,12 @@ export default function Stage() {
 
   function changeCaseClick(event: React.MouseEvent) {
     event.preventDefault();
+    console.log(indexActive);
+    if (indexActive >= processImprovement.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex((prev) => prev + 1);
+    }
     setClick(true);
     setTimeout(() => {
       setClick(false);
@@ -82,26 +88,21 @@ export default function Stage() {
         <div className={style.num} data-text="0">
           0
         </div>
-        <div className={style.num} data-text="2">
-          2
+        <div className={style.num} data-text={indexActive+1}>
+          {indexActive+1}
         </div>
       </div>
       <div className={style.stage}>
         <h2 className={style.blockTitle}>Этапы работы</h2>
         <div className={style.centerContent}>
-          <h3 className={style.stageTitle}>Передача дизайна программисту</h3>
-          <p className={style.stageDescription}>
-            Создание черно-белых схем интерфейса, чтобы проработать логику
-            взаимодействия с терминалом. Основная цель — упрощение структуры,
-            чтобы клиент мог легко найти нужный раздел. Добавление визуальных
-            элементов и интерактивности, чтобы проверить, как клиенты
-            воспринимают интерфейс в более реалистичных условиях. Разработка
-            минималистичного и интуитивно понятного дизайна с использованием
-            контрастных цветов для ключевых элементов (например, кнопок и
-            категорий). Использование шрифтов с высокой читаемостью для
-            текстовых блоков, акцент на иерархии текста (заголовки,
-            подзаголовки, инструкции).
-          </p>
+          <h3 className={style.stageTitle}>
+            {processImprovement[indexActive].stage}
+          </h3>
+          {processImprovement[indexActive].actions.map((item, index) => (
+            <p className={style.stageDescription} key={index}>
+              {item}
+            </p>
+          ))}
         </div>
       </div>
     </article>

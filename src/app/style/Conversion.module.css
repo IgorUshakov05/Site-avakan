@@ -1,0 +1,29 @@
+.container {
+  height: 90vh;
+  display: flex;
+  max-height: 700px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: none;
+  /* font-family: "Ruberoid";
+  color: white;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 0.07em;
+  user-select: none;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; */
+}
+
+.videoContainer {
+    width: 100%;
+}
+.videoContainer > video {
+    width: 100%;
+}

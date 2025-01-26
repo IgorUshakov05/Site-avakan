@@ -1,0 +1,54 @@
+.land {
+  height: 85vh;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-height: 700px;
+  animation: spreadRed 3s ease-in-out forwards;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.titleCase {
+  font-family: "Unbounded";
+  font-size: 161px;
+  font-weight: 500;
+  line-height: 159.39px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.svg {
+  position: absolute;
+  top: calc(100% - 75px / 2);
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: fit-content;
+}
+@keyframes spreadRed {
+  0% {
+    background: radial-gradient(
+      10% 20% at 50% 100%,
+      #ff0000 0%,
+      #000000 91.25%
+    );
+    background-size: 100% 100%;
+    background-position: bottom;
+  }
+  100% {
+    background: radial-gradient(
+      10% 20% at 50% 100%,
+      #ff0000 0%,
+      #000000 91.25%
+    );
+    background-size: 500% 500%;
+    background-position: bottom;
+  }
+}

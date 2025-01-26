@@ -1,0 +1,31 @@
+.container {
+  height: 85vh;
+  max-height: 700px;
+  position: relative;
+
+}
+
+.text {
+  font-family: "Ruberoid";
+  color: white;
+  font-size: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: auto;
+  width: 100%;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.absolute {
+    position: absolute;
+    top: 25%;
+    bottom:0;
+    right: 0;
+    left: 0;
+    /* background:red; */
+
+}

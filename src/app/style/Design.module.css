@@ -1,0 +1,73 @@
+.container {
+  margin-top: 100px;
+  height: 90vh;
+  max-height: 700px;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.column {
+  flex-direction: column;
+  width: 25%;
+}
+
+.title {
+  font-family: "Ruberoid";
+  font-size: 61px;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  line-height: 70.15px;
+  letter-spacing: 0.07em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.description {
+  font-family: "Unbounded";
+  font-size: 10px;
+  color: white;
+  font-weight: 300;
+  margin-top: 30px;
+  line-height: 14.71px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.next {
+  font-family: "Unbounded";
+  color: white;
+  font-size: 13.91px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 17.25px;
+  text-align: right;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.next::after {
+  content: "";
+  width: 25px;
+  display: block;
+  aspect-ratio: 1;
+  background-color: #e40038;
+  border-radius: 50%;
+}
+
+.img_container {
+    width: 100%;
+    margin-top: 40px;
+}
+.img_container > img {
+    width: 100%;
+    height: auto;
+}
