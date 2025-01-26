@@ -13,19 +13,19 @@ export const Header = () => {
           <nav>
             <ul className={style.listLink}>
               <li className={style.linkItem}>
-                <a href="#about">Веб-студия</a>
+                <a href="/#about">Веб-студия</a>
               </li>
               <li className={style.linkItem}>
-                <a href="#case">Портфолио</a>
+                <a href="/#case">Портфолио</a>
               </li>
               <li className={style.linkItem}>
-                <a href="#services">Услуги</a>
+                <a href="/#services">Услуги</a>
               </li>
               <li className={style.linkItem}>
-                <a href="#reviews">Отзывы</a>
+                <a href="/#reviews">Отзывы</a>
               </li>
               <li className={style.linkItem}>
-                <a href="#contact">Связаться</a>
+                <a href="/#contact">Связаться</a>
               </li>
             </ul>
           </nav>

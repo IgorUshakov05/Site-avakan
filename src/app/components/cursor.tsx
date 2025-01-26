@@ -8,12 +8,14 @@ enum WayCursor {
 export const Cursor = ({
   way,
   isClick,
+  text,
 }: {
   way: WayCursor;
   isClick: boolean;
+  text?: string;
 }) => {
   useEffect(() => {
-    console.log('Курсор')
+    console.log("Курсор");
   }, [isClick, way]);
   return (
     <>
