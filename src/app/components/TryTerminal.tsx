@@ -3,13 +3,17 @@ import style from "@/app/style/Case_TryTerminal.module.css";
 function TryTerminal() {
   return (
     <article className={style.container}>
-      {backgroundSVG()}
+      <div className={style.svgBg}>{backgroundSVG()}</div>
+      <p className={style.title}>
+        Опробуйте
+        <br />
+        сами
+      </p>
       {/* <h2 className={style.text}>
         Опробуйте
         <br />
         сами
       </h2> */}
-      <div className={style.absolute}></div>
     </article>
   );
 }
@@ -17,31 +21,62 @@ function TryTerminal() {
 function backgroundSVG() {
   return (
     <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
+      width="1262"
+      height="696"
+      viewBox="0 0 1262 696"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <path
+        d="M1 695C1 695 125.388 347.999 631 348C1136.61 348.001 1261 695 1261 695"
+        stroke="red"
+        strokeDasharray="10 10"
+      />
+      <path
+        d="M1261 1.00011C1261 1.00011 1136.61 348.001 631 348C125.388 347.999 0.999983 0.999988 0.999983 0.999988"
+        stroke="red"
+        strokeDasharray="10 10"
+      />
       <mask
-        id="mask0_330_743"
         style={{ maskType: "alpha" }}
         maskUnits="userSpaceOnUse"
-        x="0"
-        y="0"
+        x="622"
+        y="339"
         width="18"
         height="18"
       >
-        <circle cx="9" cy="9" r="9" fill="#FF0000" />
+        <circle cx="631" cy="348" r="9" fill="#FF0000" />
       </mask>
-      <g mask="url(#mask0_330_743)">
+      <g mask="url(#mask0_247_3363)">
         <path
-          d="M-621 356C-621 356 -496.612 8.99945 9.00002 9C514.612 9.00055 639 356 639 356"
+          d="M1 695C1 695 125.388 347.999 631 348C1136.61 348.001 1261 695 1261 695"
           stroke="#FF0000"
           strokeDasharray="10 10"
         />
         <path
-          d="M639 -338C639 -338 514.612 9.00054 8.99998 8.99994C-496.612 8.99934 -621 -338 -621 -338"
+          d="M1261 1.00011C1261 1.00011 1136.61 348.001 631 348C125.388 347.999 0.999983 0.999988 0.999983 0.999988"
+          stroke="#FF0000"
+          strokeDasharray="10 10"
+        />
+      </g>
+      <mask
+        style={{ maskType: "alpha" }}
+        maskUnits="userSpaceOnUse"
+        x="622"
+        y="339"
+        width="18"
+        height="18"
+      >
+        <circle cx="631" cy="348" r="9" fill="#FF0000" />
+      </mask>
+      <g mask="url(#mask1_247_3363)">
+        <path
+          d="M387 695C387 695 435.176 347.999 631 348C826.824 348.001 875 695 875 695"
+          stroke="#FF0000"
+          strokeDasharray="10 10"
+        />
+        <path
+          d="M875 1.00011C875 1.00011 826.824 348.001 631 348C435.176 347.999 387 0.999988 387 0.999988"
           stroke="#FF0000"
           strokeDasharray="10 10"
         />

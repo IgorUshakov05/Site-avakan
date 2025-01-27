@@ -1,8 +1,8 @@
 .container {
   height: 85vh;
   max-height: 700px;
+  padding-top: 20px;
   position: relative;
-
 }
 
 .text {
@@ -20,12 +20,25 @@
   text-decoration-skip-ink: none;
 }
 
-.absolute {
-    position: absolute;
-    top: 25%;
-    bottom:0;
-    right: 0;
-    left: 0;
-    /* background:red; */
+.svgBg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  z-index: 3;
+}
 
+.title {
+  font-family: "Ruberoid";
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 700;
+  z-index: 99;
+  line-height: 99px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
