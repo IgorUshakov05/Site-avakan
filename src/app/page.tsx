@@ -9,6 +9,7 @@ import Technologe from "./blocks/Technologe";
 import Services from "./blocks/Services";
 import FeedBack from "./blocks/Feedback";
 import SendPost from "./blocks/SendPost";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <SendPost />
       <Response />
       <FeedBack />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import style from "@/app/style/Digital.module.css";
 import { useEffect, useState } from "react";
+import TextChange from "../components/TextChange";
 enum Variant {
   one = "*%#@!&=0",
   two = "!$#%&@",
@@ -23,9 +24,7 @@ export const NewDigital = () => {
   return (
     <article className={style.content}>
       <div className={`container ${style.border}`}>
-        <span className={style.text}>
-          Хакасия — Абакан — <span>{text}</span> 
-        </span>
+        <TextChange />
         <div className={style.centerAll}>
           <div className={style.video}>
             <video
