@@ -45,7 +45,7 @@
   right: 0;
   left: 0;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.525);
+  border: 1px solid rgba(255, 255, 255, 0.325);
   top: 0;
   bottom: 0;
   margin: auto;
@@ -55,16 +55,90 @@
 }
 
 .box {
-  width: 65.6%;
+  width: 66.6%;
   background: repeat;
   aspect-ratio: 1;
-  border: 0.57px solid rgba(255, 255, 255, 0.431);
+  border: 0.57px solid rgba(255, 255, 255, 0.251);
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="13" height="13"><path d="M0.334918 12.7195L0.334919 0.85216L12.2379 0.818151V12.6855L0.334918 12.7195Z" stroke="rgba(255, 255, 255, 0.331)" stroke-width="0.36681"/></svg>');
   background-size: 13px 13px; /* Размер одного элемента */
   background-repeat: repeat;
   margin: auto;
+  position: relative;
+}
+.innerBox {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: rotate(90deg);
+}
+.innerBox::after,
+.box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0%;
+  bottom: 0;
+  margin: auto;
+  left: 100%;
+  width: 1px;
+  height: 155%;
+  background: white;
+  opacity: 0.3;
 }
 
+.links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.links > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.OneItem {
+  justify-content: center !important;
+  position: relative;
+}
+.itemOfBottom {
+  position: absolute;
+  top: 11px;
+}
+.linkItem {
+  width: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181818;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.secondLink {
+  background: #007aff;
+}
+.linkItem:active {
+  background: #ff0000;
+}
+.innerBox::before,
+.box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0%;
+  bottom: 0;
+  margin: auto;
+  right: 100%;
+  width: 1px;
+  height: 155%;
+  background: white;
+  opacity: 0.3;
+}
 .textDefault {
   gap: 15px;
 }
