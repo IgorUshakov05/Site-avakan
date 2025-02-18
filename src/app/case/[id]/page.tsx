@@ -5,6 +5,8 @@ import style from "@/app/style/CasePage.module.css";
 import Design from "@/app/components/Design";
 import Conversion from "@/app/components/Conversion";
 import TryTerminal from "@/app/components/TryTerminal";
+import Footer from "@/app/components/Footer";
+import CaseLink from "@/app/components/CaseLink";
 export default function CasePage() {
   return (
     <>
@@ -67,6 +69,8 @@ export default function CasePage() {
         <TryTerminal />
         <Conversion />
       </div>
+      <CaseLink />
+      <Footer />
     </>
   );
 }
