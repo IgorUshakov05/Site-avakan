@@ -17,25 +17,32 @@ const CaseLink = () => {
           </div>
           <div className={`${style.flex} ${style.w50} ${style.linksBox}`}>
             <div className={style.box}>
+              <div className={style.redBG}></div>
               <div className={style.innerBox}></div>
 
               <div className={style.links}>
                 <div className={style.OneItem}>
                   <Link
                     href={"/awd"}
+                    target="_black"
                     className={`${style.linkItem} ${style.itemOfBottom}`}
                   >
                     <DPROFILE_SVG />
                   </Link>
                 </div>
-                <div style={{zIndex:1}}>
+                <div style={{ zIndex: 1 }}>
                   <Link
                     href={"/awd"}
+                    target="_black"
                     className={`${style.linkItem} ${style.secondLink}`}
                   >
                     <BEHANCE_SVG />
                   </Link>
-                  <Link href={"/awd"} className={style.linkItem}>
+                  <Link
+                    href={"https://github.com/IgorUshakov05/rosbank"}
+                    target="_black"
+                    className={style.linkItem}
+                  >
                     <GITHUB_SVG />
                   </Link>
                 </div>

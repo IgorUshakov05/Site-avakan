@@ -13,7 +13,6 @@
   text-transform: uppercase;
   color: white;
   width: 75%;
-
   letter-spacing: 7%;
 }
 .rigth {
@@ -59,7 +58,7 @@
   background: repeat;
   aspect-ratio: 1;
   border: 0.57px solid rgba(255, 255, 255, 0.251);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="13" height="13"><path d="M0.334918 12.7195L0.334919 0.85216L12.2379 0.818151V12.6855L0.334918 12.7195Z" stroke="rgba(255, 255, 255, 0.331)" stroke-width="0.36681"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="13" height="13"><path d="M0.334918 12.7195L0.334919 0.85216L12.2379 0.818151V12.6855L0.334918 12.7195Z" fill="none" stroke="rgba(255, 255, 255, 0.331)" stroke-width="0.36681"/></svg>');
   background-size: 13px 13px; /* Размер одного элемента */
   background-repeat: repeat;
   margin: auto;
@@ -100,6 +99,22 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
+}
+.redBG {
+  width: 400%;
+  left: -150%;
+  right: 0;
+  margin: auto;
+  height: 250%;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(252, 67, 87, 1) 0%,
+    rgba(252, 67, 87, 0) 55%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  z-index: -1;
+  top: -80%;
 }
 .OneItem {
   justify-content: center !important;
