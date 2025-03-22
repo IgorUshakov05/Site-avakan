@@ -9,6 +9,9 @@
   box-sizing: border-box;
   transition: 0.5s;
 }
+:root {
+  --bg-color: black;
+}
 video::-webkit-media-controls-play-button {
   display: none;
 }
@@ -19,8 +22,9 @@ video::-webkit-media-controls-start-playback-button {
   display: none;
 }
 body {
-  background-color: black;
+  background-color: var(--bg-color);
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -45,6 +49,12 @@ body {
   font-family: "Unbounded";
   src: url("/fonts/Unbounded/static/Unbounded-ExtraBold.ttf") format("truetype");
   font-weight: 800; /* Extra Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raavi";
+  src: url("/fonts/Raavi/Raavi-Bold.ttf") format("truetype");
+  font-weight: 700; /* Extra Bold */
   font-style: normal;
 }
 
