@@ -2,6 +2,7 @@ import { ICaseInfo } from "@/app/types/ICaseInfo";
 import style from "@/app/style/CaseElem.module.css";
 import Company from "./CompanyCase";
 import { ListItem } from "./ListItem";
+import Link from "next/link";
 interface CaseElemProps {
   obj: ICaseInfo;
   isInversed?: boolean;
@@ -17,11 +18,13 @@ function CaseElem({ obj, isInversed }: CaseElemProps) {
       </div>
       <div
         className={style.content}
-        style={{ padding: !isInversed ? "50px 0 50px 40px" : "50px 40px 50px 0" }}
+        style={{
+          padding: !isInversed ? "50px 0 50px 40px" : "50px 40px 50px 0",
+        }}
       >
         <div className={style.titleWrapper}>
           <h3 className={style.title}>
-            <a href="">{obj.title}</a>
+            <Link href={`/case/${obj.href}`}>{obj.title}</Link>
           </h3>
         </div>
         <div className={style.whatWrapper}>

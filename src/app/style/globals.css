@@ -34,6 +34,29 @@ body {
 
 
 @font-face {
+  font-family: "Rock Star";
+  src: url("/fonts/RockStar/RS-extralight.otf") format("truetype");
+  font-weight: 300; 
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rock Star";
+  src: url("/fonts/RockStar/RS-regular.otf") format("truetype");
+  font-weight: 500; 
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rock Star";
+  src: url("/fonts/RockStar/RS-extrabold.otf") format("truetype");
+  font-weight: 700; 
+  font-style: normal;
+}
+
+
+
+
+
+@font-face {
   font-family: "Raleway";
   src: url("/fonts/Raleway/Raleway-ExtraLight.ttf") format("truetype");
   font-weight: 400; 

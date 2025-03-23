@@ -7,6 +7,8 @@ import WebHuntFor from "@/app/components/WebHuntFor";
 import TroubleWebHUnt from "@/app/components/Trouble";
 import Issue from "@/app/components/Issue";
 import FontAndDesign from "@/app/components/FontAndStyle";
+import UI from "@/app/components/UI";
+import Skills from "@/app/components/Skills";
 export default function CasePage() {
   return (
     <>
@@ -17,6 +19,8 @@ export default function CasePage() {
         <TroubleWebHUnt />
         <Issue />
         <FontAndDesign />
+        <UI />
+        <Skills />
       </div>
       <Footer />
     </>

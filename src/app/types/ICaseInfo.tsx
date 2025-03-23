@@ -1,6 +1,7 @@
 interface ICaseInfo {
   title: string;
   what: string[];
+  href: string;
   picture: string;
   linkCase: LinkMedia[];
   company: {
@@ -22,6 +23,7 @@ interface LinkMedia {
 const caseInfo: ICaseInfo[] = [
   {
     title: "Терминал выдачи талонов",
+    href: "/rosbank",
     what: ["UX", "UI", "3D", "Финансы", "Веб-приложение"],
     linkCase: [
       { href: "#", icon: Media.dprofile },
@@ -38,6 +40,7 @@ const caseInfo: ICaseInfo[] = [
   },
   {
     title: "Webhunt",
+    href: "/webhunt",
     what: [
       "UX",
       "UI",
@@ -63,6 +66,8 @@ const caseInfo: ICaseInfo[] = [
   },
   {
     title: "P-Bank Mobile",
+    href: "/bank",
+
     what: ["UX", "UI", "3D", "Финансы", "PreviewAppStore"],
     linkCase: [
       { href: "#", icon: Media.dprofile },
@@ -78,5 +83,4 @@ const caseInfo: ICaseInfo[] = [
   },
 ];
 
-
-export default caseInfo
+export default caseInfo;
