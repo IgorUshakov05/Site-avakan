@@ -9,6 +9,9 @@ import Issue from "@/app/components/Issue";
 import FontAndDesign from "@/app/components/FontAndStyle";
 import UI from "@/app/components/UI";
 import Skills from "@/app/components/Skills";
+import WeBest from "@/app/components/WeBest";
+import CommingSoon from "@/app/components/CommingSoon";
+import Social from "@/app/components/Social";
 export default function CasePage() {
   return (
     <>
@@ -21,6 +24,9 @@ export default function CasePage() {
         <FontAndDesign />
         <UI />
         <Skills />
+        <WeBest />
+        <CommingSoon />
+        <Social />
       </div>
       <Footer />
     </>

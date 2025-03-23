@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  background-color: rgba(254, 238, 255, 1);
+}
+.content {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 120px 0;
+}
+
+.whatsProductContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.whatsProduct {
+  font-family: "Ruberoid";
+  width: 73%;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 99%;
+  letter-spacing: 7%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.two {
+  width: 100%;
+  gap:30px;
+  display: flex;
+}
+.two > div {
+  width: 50%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.shortCard {
+  width: 47%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+    height: fit-content;
+}
+.flex {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.shortCard > h2 ,.shortCard > div > h2{
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 19px;
+  margin-top: 30px;
+  line-height: 141%;
+  letter-spacing: 0.5%;
+}
+
+.shortCard > p, .shortCard > div > p {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 146%;
+  margin-top: 10px;
+  letter-spacing: -0.5%;
+}
+
+.w100 {
+    width: 100%;
+    display: flex;
+    gap:30px;
+    align-items: center;
+}
+.twoFlex {
+    margin-top: 50px;
+    gap:30px;
+    display: flex;
+    flex-direction: column;
+}

@@ -8,7 +8,11 @@ export default function Skills() {
           <p className={style.skills}>навыки</p> в карточке вакансий
         </h1>
       </div>
-      <img src="/casePicture/projector.svg" alt="" />
+      <div className={style.vacancyCard}>
+        <img src="/casePicture/vacancyCard.png" alt="Карточка вакансии" />
+      </div>
+    <div className={style.ray}></div>
+      <img src="/casePicture/projector.svg" alt="Проектор" />
     </article>
   );
 }

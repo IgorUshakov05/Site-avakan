@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  background-color: rgba(241, 244, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  max-height: 1000px;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Ruberoid";
+  font-weight: 600;
+  font-size: 100px;
+  color: rgba(73, 0, 227, 1);
+  line-height: 99%;
+  letter-spacing: 7%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.defaultText {
+  font-family: "Unbounded";
+  font-weight: 300;
+  font-size: 13.91px;
+  color: rgba(115, 115, 115, 1);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 600px;
+  margin-top: 38px;
+}
+.state {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.img {
+  height: 300px;
+}

@@ -1,12 +1,10 @@
 .container {
   width: 100%;
-  height: 100vh;
   display: flex;
   z-index: 99;
   background-color: inherit;
   position: relative;
   flex-direction: column;
-  max-height: 800px;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -18,6 +16,14 @@
   justify-content: flex-end;
 }
 
+.vacancyCard {
+  width: 50%;
+  margin: 60px auto 0 auto;
+  max-width: 600px;
+}
+.vacancyCard > img {
+  width: 100%;
+}
 .whatsProduct {
   font-family: "Ruberoid";
   width: 75%;
@@ -28,6 +34,23 @@
   text-align: left;
   text-transform: uppercase;
 }
+.ray {
+  background: linear-gradient(
+      85.05deg,
+      rgba(139, 139, 255, 0.6) 1.66%,
+      rgba(255, 255, 255, 0.6) 47.13%
+    ),
+    linear-gradient(
+      153.78deg,
+      rgba(220, 220, 255, 0.2) 58.3%,
+      rgba(0, 0, 255, 0.2) 66.39%
+    ),
+    linear-gradient(
+      108.8deg,
+      rgba(0, 0, 255, 0.2) 18.87%,
+      rgba(220, 220, 255, 0.2) 24.07%
+    );
+}
 .skills {
   background: rgba(29, 29, 255, 1);
   color: white;
@@ -37,3 +60,4 @@
   width: fit-content;
   border: 1px solid rgba(82, 0, 255, 1);
 }
+
