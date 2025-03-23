@@ -1,0 +1,67 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  max-height: fit-content;
+  margin: 120px auto;
+}
+.whatsProductContainer {
+  display: flex;
+  position: relative;
+  margin-top: 120px;
+  justify-content: flex-end;
+}
+
+.whatsProduct {
+  font-family: "Ruberoid";
+  width: 75%;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 99%;
+  letter-spacing: 7%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.w50 {
+  width: 50%;
+}
+.mt50 {
+  margin-top: 60px;
+}
+.text {
+  font-family: "Ruberoid";
+  font-weight: 400;
+  font-size: 13.15px;
+  line-height: 162%;
+  letter-spacing: 0%;
+}
+.flex {
+  display: flex;
+  gap: 30px;
+}
+.pics {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.in {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+}
+.ru {
+  position: absolute;
+  left: 17%;
+  bottom: -17%;
+}
+
+.js {
+  position: absolute;
+
+  top: 30%;
+}

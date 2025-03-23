@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  background-color: white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0px;
+  justify-content: space-between;
+  max-height: 1000px;
+}
+.picture {
+  position: absolute;
+  width: 50%;
+  max-width: 600px;
+  left: 0;
+}
+.leftPic {
+  left: auto;
+  right: 0;
+}
+.picture > img {
+  width: 100%;
+}
+.font {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.reverse {
+  flex-direction: row;
+}
+.info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.leftToRight {
+  align-items: flex-start;
+}
+.listRaleway {
+  font-family: "Raleway" !important;
+}
+.for {
+  color: white;
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 18.3px;
+  line-height: 100%;
+  background-color: black;
+  padding: 6px 11px;
+  border-radius: 20px;
+  letter-spacing: 0%;
+  width: fit-content;
+}
+
+.Ubuntu {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-size: 160px;
+  color: #1d1dff;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.list {
+  display: flex;
+  gap: 22px;
+  font-family: "Raleway";
+  font-size: 18.3px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
