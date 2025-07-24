@@ -27,9 +27,9 @@
 .SA,
 .SA_Rotate {
   color: black;
-  font-family: var(--Unbounded-Regular);
+  font-family: "Ruberoid";
   font-size: 300px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 86%;
   letter-spacing: 5%;
   text-align: left;
@@ -38,7 +38,7 @@
   color: black;
   transform: skew(-61deg, 0deg) rotateX(180deg) scaleY(0.5);
   margin-right: 201px;
-  margin-top: -90px;
+  margin-top: -87px;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -57,7 +57,7 @@
 }
 .what {
   color: rgb(255, 255, 255);
-  font-family: var(--Unbounded-Regular);
+  font-family: "Ruberoid";
   font-size: 40px;
   margin-top: 60px;
   font-weight: 400;

@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Landing } from "./blocks/SiteAbakan";
 import { WhoIam } from "./blocks/WhoIam";
 import { NewDigital } from "./blocks/NewWeb";
+import { ReactQueryProvider } from "./components/ReactQueryProvider";
 import { Works } from "./blocks/Terminal";
 import { MoreAboutCase } from "./blocks/MoreAboutCase";
 import Technologe from "./blocks/Technologe";
@@ -10,7 +11,6 @@ import Services from "./blocks/Services";
 import FeedBack from "./blocks/Feedback";
 import SendPost from "./blocks/SendPost";
 import Footer from "./components/Footer";
-
 export default function Home() {
   return (
     <>
@@ -22,7 +22,9 @@ export default function Home() {
       <MoreAboutCase />
       <Technologe />
       <Services />
-      <SendPost />
+      <ReactQueryProvider>
+        <SendPost />
+      </ReactQueryProvider>
       <Response />
       <FeedBack />
       <Footer />

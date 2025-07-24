@@ -20,7 +20,7 @@ export const Landing = () => {
         </div>
         <div className={style.textBlock}>
           <h1 className={style.titleSite}>
-            <span>SiteAbakan</span>
+            <span>HuntTeam</span>
           </h1>
           <div className={style.description}>
             <div></div>

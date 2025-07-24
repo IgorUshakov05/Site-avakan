@@ -1,0 +1,83 @@
+.content {
+  width: 100%;
+  height: 100vh; /* Для примера, чтобы фон был виден на всю высоту */
+  background: linear-gradient(
+    8deg,
+    #4901e3 45%,
+    /* Темный фиолетовый до 50% */ #4801e3e3 45%
+      /* Светлый фиолетовый после 50% */
+  );
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  max-height: 900px;
+}
+.h1 {
+  font-family: "Ruberoid";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 99%;
+  color: white;
+  letter-spacing: 7%;
+  text-transform: uppercase;
+  width: 75%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+  max-width: 1200px;
+}
+.topElem {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card {
+  width: 25%;
+}
+.desctiption {
+  font-family: "Unbounded";
+  color: white;
+  font-weight: 300;
+  font-size: 13.91px;
+  margin-top: 95px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.text {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 13.15px;
+  margin-top: 15px;
+  line-height: 162%;
+  color: white;
+  letter-spacing: 0%;
+}
+.text:nth-child(2) {
+  margin-top: 15px;
+}
+
+.imgAbs {
+  position: absolute;
+}
+.imgAbs:nth-child(1) {
+  top: 30%;
+  left: 7%;
+}
+.imgAbs:nth-child(3) {
+  bottom: 15%;
+  right: 37%;
+}
+
+.imgAbs:nth-child(2) {
+  bottom: 39%;
+  right: 10%;
+}

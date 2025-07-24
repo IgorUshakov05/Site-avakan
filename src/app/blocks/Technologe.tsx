@@ -24,6 +24,7 @@ function Technologe() {
     "MobX",
     "React.JS",
     "Next",
+    "Docker",
     "PostgreSQL",
     "Redux",
     "SCSS",

@@ -23,7 +23,7 @@ const CaseLink = () => {
               <div className={style.links}>
                 <div className={style.OneItem}>
                   <Link
-                    href={"/awd"}
+                    href={"https://dprofile.ru/case/80099/rosbank-veb-prilozenie-dlia-terminala"}
                     target="_black"
                     className={`${style.linkItem} ${style.itemOfBottom}`}
                   >
@@ -32,7 +32,7 @@ const CaseLink = () => {
                 </div>
                 <div style={{ zIndex: 1 }}>
                   <Link
-                    href={"/awd"}
+                    href={"https://www.behance.net/gallery/204740919/ROSBANK-TERMINAL"}
                     target="_black"
                     className={`${style.linkItem} ${style.secondLink}`}
                   >

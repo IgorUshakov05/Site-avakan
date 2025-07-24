@@ -26,9 +26,18 @@ export const Works = () => {
       descriptionCase: `Терминал выдачи талонов`,
       companyIcon: "rosbank.svg",
       media: [
-        { icon: Media.dprofile, href: "#" },
-        { icon: Media.github, href: "#" },
-        { icon: Media.behance, href: "#" },
+        {
+          href: "https://dprofile.ru/case/80099/rosbank-veb-prilozenie-dlia-terminala",
+          icon: Media.dprofile,
+        },
+        {
+          href: "https://github.com/IgorUshakov05/Rosbank",
+          icon: Media.github,
+        },
+        {
+          href: "https://www.behance.net/gallery/204740919/ROSBANK-TERMINAL",
+          icon: Media.behance,
+        },
       ],
       casePicture: "rosbank.webm",
     },
@@ -37,9 +46,10 @@ export const Works = () => {
       descriptionCase: `Дизайн приложения`,
       companyIcon: "pBank.svg",
       media: [
-        { icon: Media.dprofile, href: "#" },
-        { icon: Media.github, href: "#" },
-        { icon: Media.behance, href: "#" },
+        {
+          icon: Media.behance,
+          href: "https://booming-area-660.notion.site/P-BANK-0e859a08182c411083e308f8ce7ce3e4",
+        },
       ],
       casePicture: "p-bank.webm",
     },
@@ -48,9 +58,14 @@ export const Works = () => {
       descriptionCase: `Платформа для найма в IT`,
       companyIcon: "hunt.svg",
       media: [
-        { icon: Media.dprofile, href: "#" },
-        { icon: Media.github, href: "#" },
-        { icon: Media.behance, href: "#" },
+        {
+          href: "https://dprofile.ru/case/77055/webhunt-brending-uxui-grafika",
+          icon: Media.dprofile,
+        },
+        {
+          href: "https://www.behance.net/gallery/203214451/WebHunt-Brending-UXUI-Logos",
+          icon: Media.behance,
+        },
       ],
       casePicture: "webhunt.webm",
     },

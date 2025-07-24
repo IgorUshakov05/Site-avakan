@@ -1,34 +1,79 @@
 "use client";
-
+import { QueryClientProvider } from "@tanstack/react-query";
 import style from "@/app/style/SendPost.module.css";
 import { useState } from "react";
+import useSendRequest from "../hooks/useSendRequest";
 
 function SendPost() {
+  const { mutate, isPending } = useSendRequest();
   const [media] = useState([
     { img: "telegram", alt: "Телеграм" },
     { img: "vk", alt: "Вк" },
     { img: "tenchat", alt: "Тенчат" },
     { img: "email", alt: "Почта" },
   ]);
+
+  const [selectedContact, setSelectedContact] = useState("");
+  const [link, setLink] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [description, setDescription] = useState("");
+  const [budgetValue, setBudgetValue] = useState(0);
+  const [budgetFormatted, setBudgetFormatted] = useState("0");
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setFile(e.target.files[0]);
+    }
+  };
+
+  const handleBudgetChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value.replace(/\s/g, "");
+
+    if (!isNaN(Number(rawValue))) {
+      const numericValue = Number(rawValue);
+      let formattedValue = numericValue.toLocaleString("ru-RU");
+
+      if (numericValue >= 1000000) {
+        formattedValue = numericValue / 1000000 + "м";
+      } else if (numericValue >= 100000 && numericValue % 100000 === 0) {
+        formattedValue = numericValue / 1000 + "к";
+      }
+
+      setBudgetFormatted(formattedValue);
+      setBudgetValue(numericValue);
+    }
+  };
+
+  const handleSubmit = () => {
+    const formData = new FormData();
+
+    formData.append("connect", link);
+    formData.append("description", description);
+    formData.append("price", budgetValue.toString());
+
+    if (file) {
+      formData.append("file", file);
+    }
+
+    mutate(formData, {
+      onSuccess: () => alert("Заявка успешно отправлена!"),
+      onError: (error) => console.error(error),
+    });
+  };
+
   return (
     <div className={style.content}>
       <div className={style.parentTitle}>
         <span className={style.title}>Работаем?</span>
         <span className={style.describe}>
-          Мы внимательно рассмотрит вашу заявку, чтобы оценить объем работы и
-          предложить оптимальные решения. В любом случае, мы свяжемся с вами,
-          чтобы обсудить детали и предложить вам лучшие варианты для достижения
-          ваших целей. Заполните форму, и мы поможем вашему проекту начать путь
-          к успеху!
+          Мы внимательно рассмотрим вашу заявку...
         </span>
       </div>
       <div className={`${style.flex} ${style.main}`}>
         <div className={`${style.flex} ${style.center}`}>
           <div className={style.feed}>
             <div className={`${style.flex} ${style.text}`}>
-              <span className={style.default}>
-                Укажите контакт для обратной свзяи
-              </span>
+              <span className={style.default}>Укажите контакт</span>
               <span className={`${style.star} ${style.defaultStar}`}>*</span>
             </div>
             <div className={style.inputs}>
@@ -42,6 +87,7 @@ function SendPost() {
                     className={style.input}
                     name="message"
                     id={item.alt}
+                    onChange={() => setSelectedContact(item.alt)}
                   />
                 </div>
               ))}
@@ -52,36 +98,22 @@ function SendPost() {
               id="link"
               className={`${style.textarea} ${style.inputLink}`}
               placeholder={"Вставьте ссылку"}
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
             />
             <div className={style.fileTZ}>
-              <span className={style.default}>
-                Добавьте файл, будет круто если это - ТЗ &lt;3
-              </span>
+              <span className={style.default}>Добавьте файл</span>
               <div className={style.inputFIle}>
-                <input type="file" className={style.file} />
+                <input
+                  type="file"
+                  className={style.file}
+                  onChange={handleFileChange}
+                />
                 <div className={style.textAndDown}>
                   <span className={style.default}>
-                    Перетяните файл и положите в это поле
+                    {file ? file.name : "Перетяните файл и положите в это поле"}
                   </span>
-                  <svg
-                    width="26"
-                    height="26"
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13 0.788086V18.1214M13 18.1214L18.1212 13.0892M13 18.1214L7.87878 13.0892"
-                      stroke="white"
-                      strokeWidth="0.5"
-                    />
-                    <path d="M0 20.4849H26" stroke="white" strokeWidth="0.5" />
-                    <path
-                      d="M5.12122 25.2119H20.8788"
-                      stroke="white"
-                      strokeWidth="0.5"
-                    />
-                  </svg>
+                  {/* SVG... */}
                 </div>
               </div>
             </div>
@@ -90,44 +122,50 @@ function SendPost() {
             <video src="/video/sa.webm" autoPlay muted loop playsInline></video>
           </div>
         </div>
-        <Right />
+        <Right
+          description={description}
+          setDescription={setDescription}
+          budgetValue={budgetValue}
+          isPending={isPending}
+          budgetFormatted={budgetFormatted}
+          handleBudgetChange={handleBudgetChange}
+          onSubmit={handleSubmit}
+        />
       </div>
     </div>
   );
 }
 
-const Right = () => {
-  let [value, setValue] = useState(0);
-  let [buget, setBuget] = useState("0");
+interface RightProps {
+  description: string;
+  setDescription: (v: string) => void;
+  budgetValue: number;
+  isPending: boolean;
+  budgetFormatted: string;
+  handleBudgetChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: () => void;
+}
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawValue = e.target.value.replace(/\s/g, "");
-
-    if (!isNaN(Number(rawValue))) {
-      const numericValue = Number(rawValue);
-      let formattedValue = numericValue.toLocaleString("ru-RU");
-
-      if (numericValue >= 1000000) {
-        formattedValue = numericValue / 1000000 + "м";
-      } else if (numericValue >= 100000 && numericValue % 100000 === 0) {
-        formattedValue = numericValue / 1000 + "к";
-      }
-
-      setBuget(formattedValue);
-      setValue(numericValue);
-    }
-  };
-
+const Right = ({
+  description,
+  setDescription,
+  isPending,
+  budgetValue,
+  budgetFormatted,
+  handleBudgetChange,
+  onSubmit,
+}: RightProps) => {
   return (
     <div>
       <div className={style.textareaParent}>
         <span className={style.star}>*</span>
-        <label htmlFor="twoWord"></label>
         <textarea
           name="twoWord"
           id="twoWord"
           className={style.textarea}
           placeholder={"Расскажите о компании в двух словах"}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         ></textarea>
       </div>
       <div className={`${style.buget} ${style.main}`}>
@@ -135,29 +173,34 @@ const Right = () => {
         <div>
           <input
             type="range"
-            name=""
             className={style.selectValue}
-            id=""
-            value={value}
+            value={budgetValue}
             min={10000}
             max={1000000}
-            onChange={handleInputChange}
+            onChange={handleBudgetChange}
           />
         </div>
         <div>
           <input
             className={style.value}
-            value={buget}
+            value={budgetFormatted}
             type="text"
-            onChange={handleInputChange}
+            onChange={handleBudgetChange}
             placeholder="Введите сумму"
           />
         </div>
       </div>
       <div className={style.main}>
-        <button className={style.sendQuery}>Отправть</button>
+        <button
+          className={style.sendQuery}
+          onClick={onSubmit}
+          disabled={isPending}
+        >
+          Отправить
+        </button>
       </div>
     </div>
   );
 };
+
 export default SendPost;

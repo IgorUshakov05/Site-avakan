@@ -13,19 +13,19 @@ const Footer = () => {
           <nav className={style.flex}>
             <ul className={`${style.flex} ${style.linkNav}`}>
               <li>
-                <Link href={""}>Веб-студия</Link>
+                <Link href={"/"}>Веб-студия</Link>
               </li>
               <li>
-                <Link href={""}>Портфолио</Link>
+                <Link href={"/"}>Портфолио</Link>
               </li>
               <li>
-                <Link href={""}>Услуги</Link>
+                <Link href={"/#case"}>Услуги</Link>
               </li>
               <li>
-                <Link href={""}>Отзывы</Link>
+                <Link href={"/#reviews"}>Отзывы</Link>
               </li>
               <li>
-                <Link href={""}>Связаться</Link>
+                <Link href={"/#contact"}>Связаться</Link>
               </li>
             </ul>
           </nav>
@@ -36,14 +36,14 @@ const Footer = () => {
           <TextChange />
         </p>
         <p style={{ textAlign: "center" }}>
-          WebStudia {new Date().getFullYear()}
+          HuntTeam {new Date().getFullYear()}
         </p>
         <Link
-          href="mailto:hello@siteabakan.ru"
+          href="mailto:hello@huntteam.ru"
           target="_blank"
           style={{ textAlign: "right", cursor: "pointer" }}
         >
-          hello@siteabakan.ru
+          hello@huntteam.ru
         </Link>
       </div>
     </footer>

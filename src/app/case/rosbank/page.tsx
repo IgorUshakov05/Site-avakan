@@ -7,6 +7,45 @@ import Conversion from "@/app/components/Conversion";
 import TryTerminal from "@/app/components/TryTerminal";
 import Footer from "@/app/components/Footer";
 import CaseLink from "@/app/components/CaseLink";
+export const metadata = {
+  title: "Кейс: Росбанк — UX терминала самообслуживания | HuntTeam",
+  description:
+    "Как мы исследовали поведение клиентов Росбанка и разработали новый минималистичный интерфейс терминала, который помогает быстрее выбрать нужный раздел.",
+  keywords: [
+    "Росбанк",
+    "UX-дизайн",
+    "терминал самообслуживания",
+    "кейсы HuntTeam",
+    "исследование пользователей",
+    "интерфейс банка",
+    "редизайн терминала",
+  ],
+  openGraph: {
+    title: "Кейс: Росбанк — UX терминала самообслуживания | HuntTeam",
+    description:
+      "Дизайнер HuntTeam лично работал с клиентами банка, чтобы переосмыслить интерфейс терминала. Результат — удобство, минимализм и понятность.",
+    url: "https://huntteam.ru/case/rosbank",
+    siteName: "HuntTeam",
+    locale: "ru_RU",
+    type: "article",
+    images: [
+      {
+        url: "https://huntteam.ru/images/cases/rosbank-cover.jpg", // замените на актуальный путь
+        width: 1200,
+        height: 630,
+        alt: "Интерфейс терминала Росбанка от HuntTeam",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Кейс: UX терминала Росбанка от HuntTeam",
+    description:
+      "Как мы переосмыслили навигацию и визуал терминала банка. Уникальный подход на основе реального опыта.",
+    images: ["https://huntteam.ru/images/cases/rosbank-cover.jpg"],
+  },
+};
+
 export default function CasePage() {
   return (
     <>

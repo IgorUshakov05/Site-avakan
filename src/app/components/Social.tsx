@@ -12,13 +12,13 @@ export default function Social() {
               будет выпущен пост с датой запуска проекта
             </p>
             <div className={style.listLink}>
-              <Link className={style.link} href="">
+              <Link className={style.link} href="#https://instagram.com/webhunt.ru">
                 {SOC(Media.INST)}
               </Link>
-              <Link className={style.link} href="">
+              <Link className={style.link} href="https://vc.ru/u/3587542">
                 {SOC(Media.TG)}
               </Link>
-              <Link className={style.link} href="">
+              <Link className={style.link} href="https://t.me/WebHunt_ru">
                 {SOC(Media.VC)}
               </Link>
             </div>

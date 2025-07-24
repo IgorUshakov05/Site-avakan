@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+import { Html, Head, Main, NextScript } from "next/document";
+import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./style/globals.css";
+
 
 // Загружаем все вариации шрифта
 const UnboundedBlack = localFont({
@@ -37,27 +39,38 @@ const UnboundedSemiBold = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Site-Abakan",
-  description: "WebHunt — студия разработки веб-приложений и сайтов.",
+  title: "HuntTeam — Веб-студия из Абакана",
+  description:
+    "HuntTeam — веб-студия из Абакана, специализирующаяся на разработке высококачественных веб-приложений, сайтов и digital-решений. Мы создаем уникальные решения под ключ с фокусом на frontend, backend и UX/UI дизайн.",
+  openGraph: {
+    title: "HuntTeam — Веб-студия из Абакана",
+    description:
+      "HuntTeam — веб-студия из Абакана, создающая качественные веб-приложения и digital-решения для бизнеса. Мы работаем с фронтендом, бэкендом и дизайном.",
+    url: "https://huntteam.ru",
+    siteName: "HuntTeam",
+    images: [
+      {
+        url: "https://huntteam.ru/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "HuntTeam — Веб-студия из Абакана",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  // JSON-LD описание студии
+}) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "SiteAbakan",
-    url: "https://site-abakan.ru", // Укажите свой URL
-    logo: "https://site-abakan.ru/logo.png", // Укажите путь к вашему логотипу
-    sameAs: [
-      "https://twitter.com/WebHunt",
-      "https://facebook.com/WebHunt",
-      "https://instagram.com/WebHuntStudio",
-    ],
+    name: "HuntTeam",
+    url: "https://huntteam.ru",
+    logo: "https://huntteam.ru/favicon-32x32.png",
+    sameAs: ["https://t.me/HuntTeam_ru"],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Абакан",
@@ -67,7 +80,7 @@ export default function RootLayout({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+7-123-456-7890",
+      telephone: "+7-987-558-44-81",
       contactType: "customer service",
       areaServed: "RU",
       availableLanguage: ["Russian", "English"],
@@ -75,18 +88,18 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="ru">
+    <html lang="ru" className={`${UnboundedBlack.variable} /* + остальное */`}>
       <head>
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${UnboundedBlack.variable} ${UnboundedBold.variable} ${UnboundedExtraBold.variable} ${UnboundedExtraLight.variable} ${UnboundedLight.variable} ${UnboundedMedium.variable} ${UnboundedRegular.variable} ${UnboundedSemiBold.variable}`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -3,7 +3,7 @@ import { ItemWork } from "@/app/types/serviceItemList";
 import WorkComponent from "./workComponent";
 export default function TypeJob(obj: ItemWork) {
   return (
-    <article className={style.serviceArticle}>
+    <article className={style.serviceArticle} id="services">
       {/* Блок с услугой: Разработка сайта */}
       <div className={style.blocks}>
         <div className={style.iconContainer}>

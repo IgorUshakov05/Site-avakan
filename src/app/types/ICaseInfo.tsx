@@ -1,4 +1,4 @@
-interface ICaseInfo {
+export interface ICaseInfo {
   title: string;
   what: string[];
   href: string;
@@ -23,12 +23,12 @@ interface LinkMedia {
 const caseInfo: ICaseInfo[] = [
   {
     title: "Терминал выдачи талонов",
-    href: "/rosbank",
+    href: "rosbank",
     what: ["UX", "UI", "3D", "Финансы", "Веб-приложение"],
     linkCase: [
-      { href: "#", icon: Media.dprofile },
-      { href: "#", icon: Media.github },
-      { href: "#", icon: Media.behance },
+      { href: "https://dprofile.ru/case/80099/rosbank-veb-prilozenie-dlia-terminala", icon: Media.dprofile },
+      { href: "https://github.com/IgorUshakov05/Rosbank", icon: Media.github },
+      { href: "https://www.behance.net/gallery/204740919/ROSBANK-TERMINAL", icon: Media.behance },
     ],
     picture: "rosbank.png",
     company: {
@@ -40,7 +40,7 @@ const caseInfo: ICaseInfo[] = [
   },
   {
     title: "Webhunt",
-    href: "/webhunt",
+    href: "webhunt",
     what: [
       "UX",
       "UI",
@@ -52,9 +52,8 @@ const caseInfo: ICaseInfo[] = [
       "Логотип",
     ],
     linkCase: [
-      { href: "#", icon: Media.dprofile },
-      { href: "#", icon: Media.github },
-      { href: "#", icon: Media.behance },
+      { href: "https://dprofile.ru/case/77055/webhunt-brending-uxui-grafika", icon: Media.dprofile },
+      { href: "https://www.behance.net/gallery/203214451/WebHunt-Brending-UXUI-Logos", icon: Media.behance },
     ],
     picture: "webhunt.png",
     company: {
@@ -66,13 +65,11 @@ const caseInfo: ICaseInfo[] = [
   },
   {
     title: "P-Bank Mobile",
-    href: "/bank",
+    href: "/#",
 
     what: ["UX", "UI", "3D", "Финансы", "PreviewAppStore"],
     linkCase: [
-      { href: "#", icon: Media.dprofile },
-      { href: "#", icon: Media.github },
-      { href: "#", icon: Media.behance },
+      { href: "https://booming-area-660.notion.site/P-BANK-0e859a08182c411083e308f8ce7ce3e4", icon: Media.behance },
     ],
     picture: "pbank.png",
     company: {

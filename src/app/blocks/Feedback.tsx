@@ -37,7 +37,7 @@ const Arrow = ({ color = "white" }: { color?: string }) => {
 };
 function FeedBack() {
   return (
-    <section className={style.content} id="contactcod">
+    <section className={style.content} id="contact">
       <div className={style.container}>
         <header className={style.header}>
           <h1 className={style.title}>Связь</h1>
@@ -49,15 +49,15 @@ function FeedBack() {
                 <h2 className={style.topContentTitle}>
                   <span>Работы</span>
                   <span className={style.links}>
-                    <a className={style.link} href="">
+                    <a className={style.link} href="https://github.com/IgorUshakov05">
                       GitHub
                       <LittleArrow />
                     </a>
-                    <a className={style.link} href="">
+                    <a className={style.link} href="https://www.dprofile.ru/yaroslavushakov">
                       DProfile
                       <LittleArrow />
                     </a>
-                    <a className={style.link} href="">
+                    <a className={style.link} href="https://www.behance.net/yaroslavushakov">
                       Behance
                       <LittleArrow />
                     </a>
@@ -75,9 +75,9 @@ function FeedBack() {
                 <h3 className={style.email}>
                   <a
                     className={style.emailLink}
-                    href="mailto:hello@siteabakan.ru"
+                    href="mailto:hello@huntteam.ru"
                   >
-                    hello@siteabakan.ru
+                    hello@huntteam.ru
                   </a>
                 </h3>
               </div>
@@ -91,7 +91,10 @@ function FeedBack() {
               <div className={style.contentItem}>
                 <ul className={style.socialList}>
                   <li className={style.socialItem}>
-                    <a className={style.socialLink} href="">
+                    <a
+                      className={style.socialLink}
+                      href="https://vk.com/YaroslavUshakov"
+                    >
                       ВК
                       <Arrow />
                     </a>
@@ -99,7 +102,7 @@ function FeedBack() {
                   <li className={style.socialItem}>
                     <a
                       className={`${style.socialLink} ${style.telegram}`}
-                      href=""
+                      href="https://t.me/YaroslavUshakov"
                     >
                       Telegram
                       <Arrow color="red" />
@@ -108,7 +111,7 @@ function FeedBack() {
                   <li className={style.socialItem}>
                     <a
                       className={`${style.socialLink} ${style.whatsapp}`}
-                      href=""
+                      href="https://web.whatsapp.com/send/?phone=79935574481"
                     >
                       WhatsApp
                       <Arrow />

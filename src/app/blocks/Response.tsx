@@ -67,8 +67,8 @@ function Response() {
 
         <div className={`${style.bottomElement}`}>
           <div className={`${style.SAbox}`}>
-            <span className={`${style.SA}`}>SA</span>
-            <span className={`${style.SA_Rotate}`}>SA</span>
+            <span className={`${style.SA}`}>HT</span>
+            <span className={`${style.SA_Rotate}`}>HT</span>
           </div>
         </div>
       </article>
