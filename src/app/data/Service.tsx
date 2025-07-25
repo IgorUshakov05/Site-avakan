@@ -55,7 +55,7 @@ const data: ItemWork[] = [
     title: "Дизайн рекламных материалов",
     time: "неделя",
     price: "18 000",
-    video: "/video/devad.webm",
+    video: "/video/devAd.webm",
     listWork: [
       {
         title: "Аналитика и планирование",
